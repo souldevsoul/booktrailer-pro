@@ -80,7 +80,7 @@ const STATUS_CONFIG: Record<ProjectStatus, StatusConfig> = {
     variant: "primary",
     icon: RiEyeLine,
     description: "Expert submitted work. Review and approve or request changes.",
-    color: "bg-cyan-100 text-cyan-900 border-cyan-500",
+    color: "bg-gray-100 text-gray-900 border-gray-500",
   },
   completed: {
     label: "COMPLETED",

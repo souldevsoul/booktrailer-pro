@@ -20,7 +20,7 @@ const StatCard = React.forwardRef<HTMLDivElement, StatCardProps>(
       <Card
         ref={ref}
         variant="elevated"
-        padding="lg"
+       
         className={cn("text-center", className)}
         {...props}
       >

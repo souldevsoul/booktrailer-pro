@@ -36,7 +36,7 @@ export function CreditBalanceCard({
   // Compact version for sidebar/header
   if (compact) {
     return (
-      <Card variant="outlined" className={`border-4 ${isCritical ? "border-red-500" : isLow ? "border-orange-500" : "border-black"}`}>
+      <Card variant="default" className={`border-4 ${isCritical ? "border-red-500" : isLow ? "border-orange-500" : "border-black"}`}>
         <CardContent className="p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -80,7 +80,7 @@ export function CreditBalanceCard({
   // Full version for dashboard
   return (
     <Card
-      variant={isCritical ? "outlined" : "gradient"}
+      variant={isCritical ? "default" : "gradient"}
       className={`border-4 ${isCritical ? "border-red-500 bg-red-50" : isLow ? "border-orange-500" : "border-black"}`}
     >
       <CardHeader>
@@ -136,7 +136,7 @@ export function CreditBalanceCard({
                 </Heading>
                 {onViewTransactions && (
                   <Button
-                    variant="ghost"
+                    variant="primary"
                     size="sm"
                     onClick={onViewTransactions}
                   >

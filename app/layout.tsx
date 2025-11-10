@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { Notifications } from '@mantine/notifications';
-import { mantineTheme } from '@/lib/mantine-theme';
+import { Inter, Playfair_Display } from "next/font/google";
 import { CookieConsent } from '@/components/marketing/CookieConsent';
 import "./globals.css";
-import '@mantine/core/styles.css';
-import '@mantine/notifications/styles.css';
-import '@mantine/dropzone/styles.css';
-import '@mantine/carousel/styles.css';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,13 +9,27 @@ const inter = Inter({
   display: 'swap',
 });
 
-// Stack Sans Headline from Google Fonts
-// Note: Loading via CSS since next/font/google doesn't support this font yet
-// Font will be loaded through globals.css
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: 'swap',
+  weight: ["400", "700", "900"],
+});
 
 export const metadata: Metadata = {
-  title: "VoiceCraft - AI-Powered Voice Synthesis",
-  description: "Create professional voice content in seconds with AI-powered voice synthesis and cloning.",
+  title: "BookTrailer Pro - Turn Your Book Into a Cinematic Trailer",
+  description: "Create stunning, professional book trailers in minutes with AI-powered video generation. Capture your story's essence and drive reader engagement.",
+  keywords: "book trailers, AI video generation, book marketing, author tools, cinematic trailers, book promotion",
+  openGraph: {
+    title: "BookTrailer Pro - Turn Your Book Into a Cinematic Trailer",
+    description: "Create stunning, professional book trailers in minutes with AI-powered video generation.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BookTrailer Pro - Turn Your Book Into a Cinematic Trailer",
+    description: "Create stunning, professional book trailers in minutes with AI-powered video generation.",
+  },
 };
 
 export default function RootLayout({
@@ -33,17 +40,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <ColorSchemeScript defaultColorScheme="light" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${inter.variable} antialiased`}>
-        <MantineProvider theme={mantineTheme} defaultColorScheme="light">
-          <Notifications position="top-right" zIndex={1000} />
-          {children}
-          <CookieConsent />
-        </MantineProvider>
+      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
+        {children}
+        <CookieConsent />
       </body>
     </html>
   );

@@ -4,8 +4,7 @@ import * as React from "react"
 import { Container } from "@/components/ui/container"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { Menu, X } from "lucide-react"
-import { RiMic2Fill } from "react-icons/ri"
+import { Menu, X, Film } from "lucide-react"
 
 export interface NavLink {
   label: string
@@ -27,7 +26,7 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
 const Header = React.forwardRef<HTMLElement, HeaderProps>(
   ({
     logo,
-    logoText = "VoiceCraft",
+    logoText = "BookTrailer Pro",
     navLinks = [],
     ctaButton,
     transparent = false,
@@ -47,7 +46,7 @@ const Header = React.forwardRef<HTMLElement, HeaderProps>(
 
     const headerBg = transparent && !scrolled
       ? "bg-transparent"
-      : "bg-white border-b-4 border-black"
+      : "bg-white/80 backdrop-cinematic border-b border-slate-200 shadow-cinema-sm"
 
     return (
       <header
@@ -62,13 +61,15 @@ const Header = React.forwardRef<HTMLElement, HeaderProps>(
         <Container maxWidth="xl">
           <nav className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="/" className="flex items-center gap-3">
+            <a href="/" className="flex items-center gap-3 group">
               {logo || (
                 <>
-                  <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center brutalist-shadow-yellow">
-                    <RiMic2Fill className="w-7 h-7 text-yellow-400" />
+                  <div className="relative">
+                    <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow-indigo group-hover:scale-105 transition-transform duration-300">
+                      <Film className="w-6 h-6 text-white" />
+                    </div>
                   </div>
-                  <span className="text-xl font-bold uppercase tracking-tight">{logoText}</span>
+                  <span className="text-xl font-display font-bold text-slate-900 tracking-tight">{logoText}</span>
                 </>
               )}
             </a>
@@ -79,7 +80,7 @@ const Header = React.forwardRef<HTMLElement, HeaderProps>(
                 <a
                   key={index}
                   href={link.href}
-                  className="text-sm font-bold uppercase tracking-wider hover:text-yellow-400 transition-colors"
+                  className="text-sm font-medium text-slate-700 hover:text-gray-600 transition-colors duration-300"
                 >
                   {link.label}
                 </a>
@@ -89,22 +90,23 @@ const Header = React.forwardRef<HTMLElement, HeaderProps>(
             {/* CTA Button */}
             <div className="hidden md:flex items-center gap-4">
               {ctaButton && (
-                <button
-                  onClick={ctaButton.onClick}
-                  className="bg-yellow-400 text-black hover:bg-yellow-300 border-4 border-black font-bold uppercase px-6 py-2 transition-colors"
-                >
-                  {ctaButton.href ? (
-                    <a href={ctaButton.href}>{ctaButton.text}</a>
-                  ) : (
-                    ctaButton.text
-                  )}
-                </button>
+                ctaButton.href ? (
+                  <a href={ctaButton.href}>
+                    <Button variant="primary" size="md">
+                      {ctaButton.text}
+                    </Button>
+                  </a>
+                ) : (
+                  <Button variant="primary" size="md" onClick={ctaButton.onClick}>
+                    {ctaButton.text}
+                  </Button>
+                )
               )}
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2"
+              className="md:hidden p-2 text-slate-700 hover:text-gray-600 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -118,32 +120,38 @@ const Header = React.forwardRef<HTMLElement, HeaderProps>(
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden border-t-4 border-black py-4">
+            <div className="md:hidden border-t border-slate-200 py-4 backdrop-cinematic">
               <div className="flex flex-col gap-4">
                 {navLinks.map((link, index) => (
                   <a
                     key={index}
                     href={link.href}
-                    className="text-sm font-bold uppercase tracking-wider hover:text-yellow-400 transition-colors py-2"
+                    className="text-sm font-medium text-slate-700 hover:text-gray-600 transition-colors py-2"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
                   </a>
                 ))}
                 {ctaButton && (
-                  <button
-                    className="bg-yellow-400 text-black hover:bg-yellow-300 border-4 border-black font-bold uppercase px-6 py-3 transition-colors w-full"
-                    onClick={() => {
-                      ctaButton.onClick?.()
-                      setMobileMenuOpen(false)
-                    }}
-                  >
-                    {ctaButton.href ? (
-                      <a href={ctaButton.href}>{ctaButton.text}</a>
-                    ) : (
-                      ctaButton.text
-                    )}
-                  </button>
+                  ctaButton.href ? (
+                    <a href={ctaButton.href} onClick={() => setMobileMenuOpen(false)}>
+                      <Button variant="primary" size="md" fullWidth>
+                        {ctaButton.text}
+                      </Button>
+                    </a>
+                  ) : (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      fullWidth
+                      onClick={() => {
+                        ctaButton.onClick?.()
+                        setMobileMenuOpen(false)
+                      }}
+                    >
+                      {ctaButton.text}
+                    </Button>
+                  )
                 )}
               </div>
             </div>

@@ -147,7 +147,7 @@ export function WorkSubmissionCard({
 
   return (
     <>
-      <Card variant="outlined" className="border-4 border-blue-500 bg-blue-50">
+      <Card variant="default" className="border-4 border-blue-500 bg-blue-50">
         <CardHeader>
           <div className="flex items-start justify-between">
             <div className="flex-1">
@@ -231,7 +231,7 @@ export function WorkSubmissionCard({
               </Heading>
               {allAudios.length > 0 && (
                 <Button
-                  variant="ghost"
+                  variant="primary"
                   size="sm"
                   onClick={() => {
                     if (selectedAudioIds.length === allAudios.length) {
@@ -278,7 +278,7 @@ export function WorkSubmissionCard({
                         </div>
                         {isNewlyUploaded && (
                           <Button
-                            variant="ghost"
+                            variant="primary"
                             size="sm"
                             onClick={() => handleRemoveUploadedAudio(audio.id)}
                             className="text-red-600 hover:text-red-700"

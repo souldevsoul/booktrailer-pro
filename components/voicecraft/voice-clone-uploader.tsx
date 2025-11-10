@@ -146,8 +146,8 @@ const VoiceCloneUploader = React.forwardRef<HTMLDivElement, VoiceCloneUploaderPr
 
         {/* Guidelines */}
         <Card
-          variant="ghost"
-          padding="md"
+          variant="primary"
+         
           className="border-2 border-blue-200 bg-blue-50"
         >
           <Stack gap="xs">
@@ -195,7 +195,7 @@ const VoiceCloneUploader = React.forwardRef<HTMLDivElement, VoiceCloneUploaderPr
                   {(styles) => (
                     <Card
                       variant="elevated"
-                      padding="md"
+                     
                       hover="lift"
                       className="relative"
                       style={styles}

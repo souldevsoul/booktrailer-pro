@@ -79,15 +79,15 @@ export function WorkReviewCard({
 
   return (
     <>
-      <Card variant="outlined" className="border-4 border-cyan-500 bg-cyan-50">
+      <Card variant="default" className="border-4 border-gray-500 bg-gray-50">
         <CardHeader>
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <CardTitle className="flex items-center gap-2 text-cyan-900">
-                <RiCheckLine className="h-6 w-6 text-cyan-600" />
+              <CardTitle className="flex items-center gap-2 text-gray-900">
+                <RiCheckLine className="h-6 w-6 text-gray-600" />
                 WORK SUBMITTED FOR REVIEW
               </CardTitle>
-              <CardDescription className="text-cyan-800">
+              <CardDescription className="text-gray-800">
                 {expertName} submitted completed work on{" "}
                 {new Date(submittedWork.submittedAt).toLocaleDateString()}
               </CardDescription>

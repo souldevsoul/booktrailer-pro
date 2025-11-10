@@ -113,7 +113,7 @@ const VoiceSelector = React.forwardRef<HTMLDivElement, VoiceSelectorProps>(
               key={voice.id}
               variant={selectedVoiceId === voice.id ? "gradient" : "default"}
               hover="lift"
-              padding="md"
+             
               className={cn(
                 "cursor-pointer transition-all",
                 selectedVoiceId === voice.id && "ring-2 ring-yellow-400 ring-offset-2"
@@ -180,7 +180,7 @@ const VoiceSelector = React.forwardRef<HTMLDivElement, VoiceSelectorProps>(
                     </Button>
                   )}
                   <Button
-                    variant="ghost"
+                    variant="primary"
                     size="icon"
                     className={cn(
                       "w-8 h-8",

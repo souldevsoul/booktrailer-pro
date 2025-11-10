@@ -18,8 +18,8 @@ const BlogCard = React.forwardRef<HTMLDivElement, BlogCardProps>(
     return (
       <Card
         ref={ref}
-        variant="default"
-        padding="none"
+        variant="primary"
+       
         hover="lift"
         className={cn("h-full overflow-hidden cursor-pointer group", className)}
         onClick={() => window.location.href = href}

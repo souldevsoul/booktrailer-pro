@@ -176,7 +176,7 @@ export function VoiceGenerator({ className }: VoiceGeneratorProps) {
 
   return (
     <div className={className}>
-      <Card variant="outlined" hover="none" className="p-8">
+      <Card variant="default" hover="none" className="p-8">
         <div className="space-y-8">
           {/* Header */}
           <div className="flex items-center gap-3">

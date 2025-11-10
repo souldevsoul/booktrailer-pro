@@ -88,7 +88,7 @@ const AudioPlayer = React.forwardRef<HTMLDivElement, AudioPlayerProps>(
       <Card
         ref={ref}
         variant="elevated"
-        padding="lg"
+       
         hover="glow"
         className={cn("w-full", className)}
         onMouseEnter={() => setIsHovering(true)}

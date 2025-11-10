@@ -13,34 +13,34 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-black text-white border-t-8 border-yellow-400">
+    <footer className="bg-gradient-dark text-white border-t border-gray-500/20">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold uppercase mb-6 text-yellow-400">
-              VoiceCraft
+            <h3 className="text-2xl font-display font-bold mb-6 text-gradient-primary">
+              BookTrailer Pro
             </h3>
-            <p className="text-gray-300 mb-4 leading-relaxed">
-              Professional AI voice synthesis platform powered by the world's most trusted models.
+            <p className="text-slate-300 mb-4 leading-relaxed">
+              Transform your books into cinematic trailers with AI-powered video generation.
             </p>
 
             {/* Payment Logos */}
             <div className="mb-6">
-              <p className="text-xs font-bold uppercase text-gray-400 mb-3">Accepted Payment Methods</p>
+              <p className="text-xs font-medium uppercase text-slate-400 mb-3">Accepted Payment Methods</p>
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-white px-3 py-2 border-2 border-white flex items-center justify-center">
-                  <SiVisa className="w-12 h-8 text-[#1A1F71]" />
+                <div className="bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <SiVisa className="w-12 h-8 text-white" />
                 </div>
-                <div className="bg-white px-3 py-2 border-2 border-white flex items-center justify-center">
-                  <SiMastercard className="w-12 h-8" />
+                <div className="bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <SiMastercard className="w-12 h-8 text-white" />
                 </div>
-                <div className="bg-white px-3 py-2 border-2 border-white flex items-center justify-center">
-                  <SiApplepay className="w-12 h-8 text-black" />
+                <div className="bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <SiApplepay className="w-12 h-8 text-white" />
                 </div>
-                <div className="bg-white px-3 py-2 border-2 border-white flex items-center justify-center">
-                  <SiGooglepay className="w-12 h-8" />
+                <div className="bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <SiGooglepay className="w-12 h-8 text-white" />
                 </div>
               </div>
             </div>
@@ -48,28 +48,28 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a
-                href="https://twitter.com/voicecraft"
+                href="https://twitter.com/booktrailerpro"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white text-black flex items-center justify-center hover:bg-yellow-400 transition-colors"
+                className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center hover:bg-gray-600 hover:border-gray-500 transition-all hover:scale-105"
                 aria-label="Twitter"
               >
                 <RiTwitterXFill className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/company/voicecraft"
+                href="https://linkedin.com/company/booktrailerpro"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white text-black flex items-center justify-center hover:bg-yellow-400 transition-colors"
+                className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center hover:bg-gray-600 hover:border-gray-500 transition-all hover:scale-105"
                 aria-label="LinkedIn"
               >
                 <RiLinkedinBoxFill className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com/voicecraft"
+                href="https://github.com/booktrailerpro"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white text-black flex items-center justify-center hover:bg-yellow-400 transition-colors"
+                className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center hover:bg-gray-600 hover:border-gray-500 transition-all hover:scale-105"
                 aria-label="GitHub"
               >
                 <RiGithubFill className="w-5 h-5" />
@@ -79,32 +79,32 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold uppercase mb-6 text-yellow-400">
+            <h4 className="text-lg font-display font-bold mb-6 text-gray-400">
               Product
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/features" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/features" className="text-slate-300 hover:text-gray-400 transition-colors">
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/pricing" className="text-slate-300 hover:text-gray-400 transition-colors">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/demo" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/demo" className="text-slate-300 hover:text-gray-400 transition-colors">
                   Demo
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/about" className="text-slate-300 hover:text-gray-400 transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/blog" className="text-slate-300 hover:text-gray-400 transition-colors">
                   Blog
                 </Link>
               </li>
@@ -113,42 +113,42 @@ export function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h4 className="text-lg font-bold uppercase mb-6 text-yellow-400">
+            <h4 className="text-lg font-display font-bold mb-6 text-gray-400">
               Legal & Policies
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/terms" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/terms" className="text-slate-300 hover:text-gray-400 transition-colors">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/privacy" className="text-slate-300 hover:text-gray-400 transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/refund-policy" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/refund-policy" className="text-slate-300 hover:text-gray-400 transition-colors">
                   Refund Policy
                 </Link>
               </li>
               <li>
-                <Link href="/cancellation-policy" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/cancellation-policy" className="text-slate-300 hover:text-gray-400 transition-colors">
                   Cancellation Policy
                 </Link>
               </li>
               <li>
-                <Link href="/payment-policy" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/payment-policy" className="text-slate-300 hover:text-gray-400 transition-colors">
                   Payment Policy
                 </Link>
               </li>
               <li>
-                <Link href="/delivery-policy" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/delivery-policy" className="text-slate-300 hover:text-gray-400 transition-colors">
                   Delivery Policy
                 </Link>
               </li>
               <li>
-                <Link href="/cookie-policy" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                <Link href="/cookie-policy" className="text-slate-300 hover:text-gray-400 transition-colors">
                   Cookie Policy
                 </Link>
               </li>
@@ -157,42 +157,42 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-bold uppercase mb-6 text-yellow-400">
+            <h4 className="text-lg font-display font-bold mb-6 text-gray-400">
               Contact Us
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <RiMailLine className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                <RiMailLine className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-sm font-bold uppercase text-gray-400 mb-1">Email</div>
+                  <div className="text-sm font-medium uppercase text-slate-400 mb-1">Email</div>
                   <a
-                    href="mailto:support@voicecraft.ai"
-                    className="text-white hover:text-yellow-400 transition-colors"
+                    href="mailto:support@booktrailerpro.com"
+                    className="text-white hover:text-gray-400 transition-colors"
                   >
-                    support@voicecraft.ai
+                    support@booktrailerpro.com
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <RiPhoneLine className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                <RiPhoneLine className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-sm font-bold uppercase text-gray-400 mb-1">Phone</div>
+                  <div className="text-sm font-medium uppercase text-slate-400 mb-1">Phone</div>
                   <a
                     href="tel:+14155551234"
-                    className="text-white hover:text-yellow-400 transition-colors"
+                    className="text-white hover:text-gray-400 transition-colors"
                   >
                     +1 (415) 555-1234
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <RiMapPinLine className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                <RiMapPinLine className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-sm font-bold uppercase text-gray-400 mb-1">Address</div>
+                  <div className="text-sm font-medium uppercase text-slate-400 mb-1">Address</div>
                   <address className="text-white not-italic">
-                    VoiceCraft, Inc.
+                    BookTrailer Pro, LLC
                     <br />
-                    123 Voice Street, Suite 100
+                    456 Literary Lane, Suite 200
                     <br />
                     San Francisco, CA 94105
                     <br />
@@ -206,36 +206,36 @@ export function Footer() {
       </div>
 
       {/* Legal Information Bar */}
-      <div className="border-t-4 border-yellow-400">
+      <div className="border-t border-gray-500/20">
         <div className="container mx-auto px-4 py-8">
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Company Registration */}
             <div>
-              <h5 className="text-sm font-bold uppercase text-yellow-400 mb-3">
+              <h5 className="text-sm font-medium uppercase text-gray-400 mb-3">
                 Company Information
               </h5>
-              <div className="text-sm text-gray-300 space-y-1">
+              <div className="text-sm text-slate-300 space-y-1">
                 <p>
-                  <span className="font-bold">Legal Name:</span> VoiceCraft, Inc.
+                  <span className="font-semibold">Legal Name:</span> BookTrailer Pro, LLC
                 </p>
                 <p>
-                  <span className="font-bold">Registration Number:</span> 12-3456789
+                  <span className="font-semibold">Registration Number:</span> 45-6789012
                 </p>
                 <p>
-                  <span className="font-bold">VAT Number:</span> US123456789
+                  <span className="font-semibold">VAT Number:</span> US456789012
                 </p>
                 <p>
-                  <span className="font-bold">Registered Address:</span> 123 Voice Street, Suite 100, San Francisco, CA 94105, United States
+                  <span className="font-semibold">Registered Address:</span> 456 Literary Lane, Suite 200, San Francisco, CA 94105, United States
                 </p>
               </div>
             </div>
 
             {/* Security & Compliance */}
             <div>
-              <h5 className="text-sm font-bold uppercase text-yellow-400 mb-3">
+              <h5 className="text-sm font-medium uppercase text-gray-400 mb-3">
                 Security & Compliance
               </h5>
-              <div className="text-sm text-gray-300 space-y-1">
+              <div className="text-sm text-slate-300 space-y-1">
                 <p>• GDPR Compliant</p>
                 <p>• SOC 2 Type II Certified</p>
                 <p>• PCI DSS Level 1 Compliant</p>
@@ -246,10 +246,10 @@ export function Footer() {
           </div>
 
           {/* Copyright & Additional Info */}
-          <div className="pt-6 border-t-2 border-gray-800">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+          <div className="pt-6 border-t border-slate-800">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
               <p>
-                © {currentYear} VoiceCraft, Inc. All rights reserved.
+                © {currentYear} BookTrailer Pro, LLC. All rights reserved.
               </p>
               <p className="text-center md:text-right">
                 Card payments processed securely. We do not store your credit card information.

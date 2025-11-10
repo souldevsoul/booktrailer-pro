@@ -1,90 +1,49 @@
 "use client"
 
 import * as React from "react"
-import { Card as MantineCard, CardSection as MantineCardSection, Paper, PaperProps } from "@mantine/core"
 import { cn } from "@/lib/utils"
 
 export interface CardProps extends React.PropsWithChildren<React.HTMLAttributes<HTMLDivElement>> {
-  variant?: "default" | "elevated" | "outlined" | "ghost" | "gradient"
-  padding?: "none" | "sm" | "md" | "lg" | "xl"
+  variant?: "default" | "elevated" | "gradient"
   hover?: "none" | "lift" | "glow"
 }
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({
     variant = "default",
-    padding = "md",
     hover = "none",
     className,
     children,
     ...props
   }, ref) => {
 
-    // Map padding to Mantine values
-    const paddingMap = {
-      none: 0,
-      sm: 'sm',
-      md: 'md',
-      lg: 'lg',
-      xl: 'xl',
-    } as const
-
-    // Variant styles
+    // Variant styles - Cinematic cards with film aesthetic
     const variantStyles = {
-      default: {
-        shadow: 'sm',
-        withBorder: true,
-      },
-      elevated: {
-        shadow: 'xl',
-        withBorder: true,
-      },
-      outlined: {
-        shadow: 'none',
-        withBorder: true,
-        style: { borderWidth: 2 },
-      },
-      ghost: {
-        shadow: 'none',
-        withBorder: true,
-        style: { backgroundColor: 'var(--mantine-color-gray-0)' },
-      },
-      gradient: {
-        shadow: 'lg',
-        withBorder: true,
-        style: {
-          background: '#EAB308',
-          color: '#000000',
-          borderWidth: 4,
-          borderColor: '#000000',
-        },
-      },
+      default: "bg-white border border-slate-200 shadow-cinema-md rounded-xl",
+      elevated: "bg-white border border-slate-200 shadow-cinema-xl rounded-2xl",
+      gradient: "bg-gradient-primary text-white shadow-cinema-lg rounded-2xl border-2 border-gray-400",
     }
 
-    // Hover styles
-    const hoverClasses = {
-      none: '',
-      lift: 'hover:-translate-y-2 hover:shadow-2xl transition-all duration-300',
-      glow: 'hover:shadow-[0_0_30px_rgba(234,179,8,0.6)] hover:border-yellow-400 transition-all duration-300',
+    // Hover styles - Cinematic effects
+    const hoverStyles = {
+      none: "",
+      lift: "hover-lift",
+      glow: "hover-glow",
     }
-
-    const config = variantStyles[variant]
 
     return (
-      <Paper
+      <div
         ref={ref}
-        {...config}
-        p={paddingMap[padding]}
-        radius="lg"
         className={cn(
-          "transition-all duration-300",
-          hoverClasses[hover],
+          "p-6 transition-all duration-300",
+          variantStyles[variant],
+          hoverStyles[hover],
           className
         )}
         {...props}
       >
         {children}
-      </Paper>
+      </div>
     )
   }
 )
@@ -96,7 +55,7 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 mb-4", className)}
+    className={cn("flex flex-col space-y-2 mb-6", className)}
     {...props}
   />
 ))
@@ -109,7 +68,7 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-2xl font-bold leading-tight tracking-tight",
+      "text-2xl font-display font-bold leading-tight tracking-tight text-slate-900",
       className
     )}
     {...props}
@@ -125,7 +84,7 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm text-gray-600", className)}
+    className={cn("text-sm text-slate-600 leading-relaxed", className)}
     {...props}
   />
 ))
@@ -145,13 +104,11 @@ const CardFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex items-center pt-6 mt-6 border-t border-gray-200", className)}
+    className={cn("flex items-center pt-6 mt-6 border-t border-slate-200", className)}
     {...props}
   />
 ))
 CardFooter.displayName = "CardFooter"
-
-const CardSection = MantineCardSection
 
 export {
   Card,
@@ -159,6 +116,5 @@ export {
   CardFooter,
   CardTitle,
   CardDescription,
-  CardContent,
-  CardSection
+  CardContent
 }

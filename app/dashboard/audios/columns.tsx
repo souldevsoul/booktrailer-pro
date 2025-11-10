@@ -55,7 +55,7 @@ export const columns: ColumnDef<Audio>[] = [
     header: ({ column }) => {
       return (
         <Button
-          variant="ghost"
+          variant="primary"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           className="hover:bg-yellow-100"
         >
@@ -75,7 +75,7 @@ export const columns: ColumnDef<Audio>[] = [
     cell: ({ row }) => {
       const voiceName = row.getValue("voiceName") as string | null
       return voiceName ? (
-        <Badge variant="default">{voiceName}</Badge>
+        <Badge variant="primary">{voiceName}</Badge>
       ) : (
         <span className="text-slate-400">-</span>
       )
@@ -86,7 +86,7 @@ export const columns: ColumnDef<Audio>[] = [
     header: ({ column }) => {
       return (
         <Button
-          variant="ghost"
+          variant="primary"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           className="hover:bg-yellow-100"
         >
@@ -138,7 +138,7 @@ export const columns: ColumnDef<Audio>[] = [
     header: ({ column }) => {
       return (
         <Button
-          variant="ghost"
+          variant="primary"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           className="hover:bg-yellow-100"
         >
@@ -161,7 +161,7 @@ export const columns: ColumnDef<Audio>[] = [
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0 hover:bg-yellow-100">
+            <Button variant="primary" className="h-8 w-8 p-0 hover:bg-yellow-100">
               <span className="sr-only">Open menu</span>
               <MoreHorizontal className="h-4 w-4" />
             </Button>

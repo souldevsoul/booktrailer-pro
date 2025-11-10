@@ -14,7 +14,7 @@ export function DashboardQuickActions() {
 
   return (
     <>
-      <Card variant="outlined" className="p-6">
+      <Card variant="default" className="p-6">
         <Heading variant="h3" className="uppercase mb-4">
           Quick Actions
         </Heading>

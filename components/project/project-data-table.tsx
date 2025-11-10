@@ -223,7 +223,7 @@ export function ProjectDataTable({
                   <TableCell onClick={(e) => e.stopPropagation()}>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                        <Button variant="primary" size="sm" className="h-8 w-8 p-0">
                           <RiMore2Line className="h-4 w-4" />
                         </Button>
                       </DropdownMenuTrigger>
@@ -317,7 +317,7 @@ export function ProjectDataTable({
         </Text>
         {(searchQuery || statusFilter !== "all" || priorityFilter !== "all") && (
           <Button
-            variant="ghost"
+            variant="primary"
             size="sm"
             onClick={() => {
               setSearchQuery("")

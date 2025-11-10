@@ -179,7 +179,7 @@ export default function SpecialistProjectDetailPage({
       {/* Project Info Grid */}
       <div className="grid gap-4 md:grid-cols-3">
         {/* Client */}
-        <Card variant="outlined" className="border-4 border-black">
+        <Card variant="default" className="border-4 border-black">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-sm">
               <RiUserLine className="h-5 w-5" />
@@ -194,7 +194,7 @@ export default function SpecialistProjectDetailPage({
 
         {/* Duration */}
         {project.estimatedDuration && (
-          <Card variant="outlined" className="border-4 border-black">
+          <Card variant="default" className="border-4 border-black">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-sm">
                 <RiTimeLine className="h-5 w-5" />
@@ -212,7 +212,7 @@ export default function SpecialistProjectDetailPage({
 
         {/* Payment */}
         {project.estimatedCost && (
-          <Card variant="outlined" className="border-4 border-black">
+          <Card variant="default" className="border-4 border-black">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-sm">
                 <RiMoneyDollarCircleLine className="h-5 w-5" />
@@ -233,7 +233,7 @@ export default function SpecialistProjectDetailPage({
 
       {/* Client Request */}
       {project.request && (
-        <Card variant="outlined" className="border-4 border-black">
+        <Card variant="default" className="border-4 border-black">
           <CardHeader>
             <CardTitle className="text-sm font-bold uppercase">CLIENT REQUEST</CardTitle>
           </CardHeader>
@@ -261,10 +261,10 @@ export default function SpecialistProjectDetailPage({
 
       {/* Submitted Work - For in_review and completed */}
       {(project.status === "in_review" || project.status === "completed") && project.submittedAt && (
-        <Card variant="outlined" className="border-4 border-cyan-500 bg-cyan-50">
+        <Card variant="default" className="border-4 border-gray-500 bg-gray-50">
           <CardHeader>
-            <CardTitle className="text-cyan-900">SUBMITTED WORK</CardTitle>
-            <Text variant="caption" className="text-xs text-cyan-800">
+            <CardTitle className="text-gray-900">SUBMITTED WORK</CardTitle>
+            <Text variant="caption" className="text-xs text-gray-800">
               Submitted on {new Date(project.submittedAt).toLocaleDateString()}
             </Text>
           </CardHeader>
@@ -305,11 +305,11 @@ export default function SpecialistProjectDetailPage({
             </div>
 
             {project.status === "in_review" && (
-              <div className="rounded-md border-2 border-cyan-500 bg-cyan-100 p-4">
-                <Text variant="body" className="font-bold text-cyan-900">
+              <div className="rounded-md border-2 border-gray-500 bg-gray-100 p-4">
+                <Text variant="body" className="font-bold text-gray-900">
                   ⏳ Waiting for client review
                 </Text>
-                <Text variant="caption" className="mt-1 text-xs text-cyan-800">
+                <Text variant="caption" className="mt-1 text-xs text-gray-800">
                   The client will review your work and either approve it or request changes.
                 </Text>
               </div>

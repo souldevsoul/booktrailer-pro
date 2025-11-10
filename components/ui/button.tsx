@@ -1,10 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Button as MantineButton, ButtonProps as MantineButtonProps } from "@mantine/core"
 import { cn } from "@/lib/utils"
 
-export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'size'> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline" | "ghost" | "destructive" | "link"
   size?: "sm" | "md" | "lg" | "xl" | "icon"
   fullWidth?: boolean
@@ -25,141 +24,68 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     asChild,
     className,
     children,
+    disabled,
     ...props
   }, ref) => {
 
-    // Map our custom sizes to Mantine sizes + custom styles
-    const sizeMap = {
-      sm: { size: 'sm' as const, h: 36, px: 16 },
-      md: { size: 'md' as const, h: 44, px: 24 },
-      lg: { size: 'lg' as const, h: 56, px: 32 },
-      xl: { size: 'xl' as const, h: 64, px: 40 },
-      icon: { size: 'md' as const, h: 44, px: 0 },
+    // Size styles - Minimal
+    const sizeStyles = {
+      sm: "h-9 px-4 text-sm rounded",
+      md: "h-11 px-6 text-base rounded",
+      lg: "h-12 px-8 text-base rounded-md",
+      xl: "h-14 px-10 text-lg rounded-md",
+      icon: "h-11 w-11 rounded",
     }
 
-    const sizeConfig = sizeMap[size]
-
-    // Custom variant styles - Brutalist Black/White/Yellow
+    // Variant styles - Minimalist black/white/red
     const variantStyles = {
-      primary: {
-        variant: 'filled' as const,
-        color: 'yellow',
-        style: {
-          backgroundColor: '#EAB308',
-          color: '#000000',
-          borderWidth: 4,
-          borderColor: '#000000',
-          fontWeight: 700,
-          textTransform: 'uppercase' as const,
-        },
-      },
-      secondary: {
-        variant: 'outline' as const,
-        color: 'dark',
-        style: {
-          borderWidth: 4,
-          borderColor: '#000000',
-          color: '#000000',
-          backgroundColor: '#FFFFFF',
-          fontWeight: 700,
-          textTransform: 'uppercase' as const,
-        },
-      },
-      outline: {
-        variant: 'outline' as const,
-        color: 'dark',
-        style: {
-          borderWidth: 4,
-          borderColor: '#000000',
-          color: '#000000',
-          fontWeight: 700,
-          textTransform: 'uppercase' as const,
-        },
-      },
-      ghost: {
-        variant: 'subtle' as const,
-        color: 'dark',
-        style: {
-          borderWidth: 4,
-          borderColor: 'transparent',
-          fontWeight: 700,
-          textTransform: 'uppercase' as const,
-        },
-      },
-      destructive: {
-        variant: 'filled' as const,
-        color: 'red',
-        style: {
-          borderWidth: 4,
-          borderColor: '#000000',
-          fontWeight: 700,
-          textTransform: 'uppercase' as const,
-        },
-      },
-      link: {
-        variant: 'transparent' as const,
-        color: 'dark',
-        style: {
-          textDecoration: 'underline',
-          textUnderlineOffset: 4,
-          fontWeight: 700,
-        },
-      },
+      primary: "bg-black text-white hover:bg-gray-800 shadow-minimal-sm font-medium transition-all duration-200",
+      secondary: "bg-white text-black border border-gray-200 hover:border-black hover:shadow-minimal-md font-medium transition-all duration-200",
+      outline: "border border-black text-black hover:bg-black hover:text-white font-medium transition-all duration-200",
+      ghost: "text-gray-700 hover:bg-gray-100 font-medium transition-all duration-200",
+      destructive: "bg-red-600 text-white hover:bg-red-700 shadow-minimal-sm font-medium transition-all duration-200",
+      link: "text-black hover:text-red-600 underline underline-offset-4 font-medium transition-colors duration-200",
     }
 
-    const variantConfig = variantStyles[variant]
+    const baseStyles = "inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 
     // If asChild is true, just render the children directly with styling
     if (asChild && React.isValidElement(children)) {
       return React.cloneElement(children as React.ReactElement<any>, {
         className: cn(
-          "inline-flex items-center justify-center gap-2 font-bold transition-all duration-200",
-          "hover:scale-[1.02] active:scale-[0.98]",
-          "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400 focus-visible:ring-offset-2",
-          variant === 'primary' && "bg-yellow-400 text-black border-4 border-black uppercase",
+          baseStyles,
+          sizeStyles[size],
+          variantStyles[variant],
+          fullWidth && "w-full",
           className,
           (children as any).props.className
         ),
-        style: {
-          height: size === 'icon' ? sizeConfig.h : undefined,
-          width: size === 'icon' ? sizeConfig.h : undefined,
-          paddingLeft: size !== 'icon' ? sizeConfig.px : 0,
-          paddingRight: size !== 'icon' ? sizeConfig.px : 0,
-          ...(children as any).props.style,
-        },
       })
     }
 
     return (
-      <MantineButton
+      <button
         ref={ref}
-        {...variantConfig}
-        size={sizeConfig.size}
-        fullWidth={fullWidth}
-        loading={loading}
-        leftSection={leftIcon}
-        rightSection={rightIcon}
         className={cn(
-          // Base styles
-          "font-bold transition-all duration-200",
-          // Hover effects
-          "hover:scale-[1.02] active:scale-[0.98]",
-          // Focus styles - Yellow ring for brutalist design
-          "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400 focus-visible:ring-offset-2",
+          baseStyles,
+          sizeStyles[size],
+          variantStyles[variant],
+          fullWidth && "w-full",
           className
         )}
-        styles={{
-          root: {
-            height: size === 'icon' ? sizeConfig.h : undefined,
-            width: size === 'icon' ? sizeConfig.h : undefined,
-            paddingLeft: size !== 'icon' ? sizeConfig.px : 0,
-            paddingRight: size !== 'icon' ? sizeConfig.px : 0,
-          },
-        }}
+        disabled={disabled || loading}
         {...props}
       >
+        {loading && (
+          <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+        )}
+        {leftIcon && <span>{leftIcon}</span>}
         {children}
-      </MantineButton>
+        {rightIcon && <span>{rightIcon}</span>}
+      </button>
     )
   }
 )

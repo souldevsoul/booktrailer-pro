@@ -9,7 +9,6 @@ export {
   CardTitle,
   CardDescription,
   CardContent,
-  CardSection,
 } from "./card"
 export { Input } from "./input"
 export { Container } from "./container"

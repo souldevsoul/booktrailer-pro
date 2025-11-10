@@ -18,7 +18,7 @@ const TestimonialCard = React.forwardRef<HTMLDivElement, TestimonialCardProps>(
       <Card
         ref={ref}
         variant="elevated"
-        padding="lg"
+       
         hover="lift"
         className={cn("h-full", className)}
         {...props}

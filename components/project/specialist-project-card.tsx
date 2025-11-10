@@ -52,7 +52,7 @@ export function SpecialistProjectCard({
         )
       case "completed":
         return (
-          <Button variant="ghost" size="sm" className="w-full" onClick={onClick}>
+          <Button variant="primary" size="sm" className="w-full" onClick={onClick}>
             <RiArrowRightLine className="mr-2 h-4 w-4" />
             VIEW DETAILS
           </Button>
@@ -71,7 +71,7 @@ export function SpecialistProjectCard({
 
   return (
     <Card
-      variant="outlined"
+      variant="primary"
       className={`cursor-pointer border-4 border-black bg-white p-4 transition-all hover:shadow-[4px_4px_0_0_#000] ${
         isUrgent ? "border-red-500 bg-red-50" : ""
       }`}

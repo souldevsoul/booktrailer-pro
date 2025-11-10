@@ -82,7 +82,7 @@ const GenerationProgress = React.forwardRef<HTMLDivElement, GenerationProgressPr
       <Card
         ref={ref}
         variant="elevated"
-        padding="lg"
+       
         className={cn("w-full", className)}
         {...props}
       >

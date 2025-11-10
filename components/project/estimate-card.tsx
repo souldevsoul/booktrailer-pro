@@ -86,7 +86,7 @@ export function EstimateCard({
   if (status === "pending") {
     return (
       <>
-        <Card variant="outlined" className="border-4 border-black">
+        <Card variant="default" className="border-4 border-black">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <RiMoneyDollarCircleLine className="h-6 w-6 text-yellow-400" />
@@ -334,7 +334,7 @@ export function EstimateCard({
   // Accepted: Show confirmed estimate
   if (status === "accepted" && estimate) {
     return (
-      <Card variant="outlined" className="border-4 border-green-500 bg-green-50">
+      <Card variant="default" className="border-4 border-green-500 bg-green-50">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-green-900">
             <RiCheckLine className="h-6 w-6 text-green-600" />

@@ -51,7 +51,7 @@ const PricingCard = React.forwardRef<HTMLDivElement, PricingCardProps>(
         <Card
           ref={ref}
           variant={isPremium ? "gradient" : "elevated"}
-          padding="lg"
+         
           hover="glow"
           className={cn(
             "h-full relative",

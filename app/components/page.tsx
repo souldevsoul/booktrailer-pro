@@ -219,7 +219,7 @@ export default function ComponentsPage() {
                     <RiExternalLinkLine className="w-5 h-5" />
                     View
                   </Button>
-                  <Button variant="ghost" className="gap-2 text-black hover:bg-yellow-400 border-4 border-transparent hover:border-black font-bold uppercase">
+                  <Button variant="primary" className="gap-2 text-black hover:bg-yellow-400 border-4 border-transparent hover:border-black font-bold uppercase">
                     <RiArrowRightLine className="w-5 h-5" />
                     More
                   </Button>
@@ -266,7 +266,7 @@ export default function ComponentsPage() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {/* Minimal Card */}
-              <Card variant="default" padding="lg" className="group bg-white border-4 border-black hover:brutalist-shadow-yellow transition-all duration-200">
+              <Card variant="default" className="group bg-white border-4 border-black hover:brutalist-shadow-yellow transition-all duration-200">
                 <div className="w-16 h-16 bg-black flex items-center justify-center mb-6 group-hover:bg-yellow-400 transition-colors">
                   <TbBrandOpenai className="w-8 h-8 text-yellow-400 group-hover:text-black" />
                 </div>
@@ -274,14 +274,14 @@ export default function ComponentsPage() {
                 <Text variant="body-sm" className="text-gray-700 mb-6 font-semibold">
                   Clean white background with bold black borders
                 </Text>
-                <Button variant="ghost" size="sm" className="gap-2 text-black hover:text-yellow-400 font-bold uppercase border-2 border-black">
+                <Button variant="primary" size="sm" className="gap-2 text-black hover:text-yellow-400 font-bold uppercase border-2 border-black">
                   Explore
                   <RiArrowRightLine className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Card>
 
               {/* Black Card */}
-              <Card variant="elevated" padding="lg" className="group bg-black border-4 border-black brutalist-shadow">
+              <Card variant="elevated" className="group bg-black border-4 border-black brutalist-shadow">
                 <div className="w-16 h-16 bg-yellow-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border-4 border-black">
                   <TbWaveSine className="w-8 h-8 text-black" />
                 </div>
@@ -296,7 +296,7 @@ export default function ComponentsPage() {
               </Card>
 
               {/* Yellow Card */}
-              <Card variant="gradient" padding="lg" className="group bg-yellow-400 border-4 border-black hover:brutalist-shadow transition-all">
+              <Card variant="gradient" className="group bg-yellow-400 border-4 border-black hover:brutalist-shadow transition-all">
                 <div className="w-16 h-16 bg-black flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border-4 border-black">
                   <HiOutlineSparkles className="w-8 h-8 text-yellow-400" />
                 </div>
@@ -463,21 +463,21 @@ export default function ComponentsPage() {
           <div className="mb-20">
             <Heading variant="h3" className="mb-8 text-black uppercase">Audio Waveform</Heading>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card variant="elevated" padding="lg" className="bg-white border-4 border-black">
+              <Card variant="elevated" className="bg-white border-4 border-black">
                 <Text variant="body-sm" className="text-black mb-4 font-bold uppercase tracking-wider flex items-center gap-2">
                   <TbWaveSine className="w-5 h-5" />
                   Small
                 </Text>
                 <Waveform size="sm" color="primary" />
               </Card>
-              <Card variant="elevated" padding="lg" className="bg-yellow-400 border-4 border-black brutalist-shadow">
+              <Card variant="elevated" className="bg-yellow-400 border-4 border-black brutalist-shadow">
                 <Text variant="body-sm" className="text-black mb-4 font-bold uppercase tracking-wider flex items-center gap-2">
                   <TbWaveSine className="w-5 h-5" />
                   Medium
                 </Text>
                 <Waveform size="md" color="secondary" />
               </Card>
-              <Card variant="elevated" padding="lg" className="bg-black border-4 border-black">
+              <Card variant="elevated" className="bg-black border-4 border-black">
                 <Text variant="body-sm" className="text-yellow-400 mb-4 font-bold uppercase tracking-wider flex items-center gap-2">
                   <TbWaveSine className="w-5 h-5" />
                   Large
@@ -491,7 +491,7 @@ export default function ComponentsPage() {
           <div className="mb-20">
             <Heading variant="h3" className="mb-8 text-black uppercase">Audio Player</Heading>
             <div className="max-w-2xl">
-              <Card variant="elevated" padding="lg" className="bg-white border-4 border-black brutalist-shadow-yellow">
+              <Card variant="elevated" className="bg-white border-4 border-black brutalist-shadow-yellow">
                 <AudioPlayer
                   title="WELCOME MESSAGE"
                   subtitle="Generated with VoiceCraft"
@@ -516,7 +516,7 @@ export default function ComponentsPage() {
           {/* <div className="mb-20">
             <Heading variant="h3" className="mb-8 text-black uppercase">Generation Progress</Heading>
             <div className="max-w-2xl space-y-4">
-              <Card variant="elevated" padding="lg" className="bg-white border-4 border-black brutalist-shadow-yellow">
+              <Card variant="elevated" className="bg-white border-4 border-black brutalist-shadow-yellow">
                 <GenerationProgress
                   status="processing"
                   progress={65}
@@ -525,7 +525,7 @@ export default function ComponentsPage() {
                   estimatedTime={30}
                 />
               </Card>
-              <Card variant="elevated" padding="lg" className="bg-black border-4 border-black brutalist-shadow">
+              <Card variant="elevated" className="bg-black border-4 border-black brutalist-shadow">
                 <GenerationProgress
                   status="completed"
                   progress={100}
@@ -539,7 +539,7 @@ export default function ComponentsPage() {
           <div className="mb-20">
             <Heading variant="h3" className="mb-8 text-black uppercase">Voice Clone Uploader</Heading>
             <div className="max-w-2xl">
-              <Card variant="elevated" padding="lg" className="bg-white border-4 border-black brutalist-shadow-yellow">
+              <Card variant="elevated" className="bg-white border-4 border-black brutalist-shadow-yellow">
                 <VoiceCloneUploader
                   onFilesUpload={(files) => setUploadedFiles(files.map((file, index) => ({
                     id: `file-${index}`,
