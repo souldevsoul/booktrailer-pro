@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import { Button, Heading, Text } from "@/components/ui"
 import { Footer } from "@/components/marketing/layout/footer"
 import { NewsletterPopup } from "@/components/marketing/NewsletterPopup"
@@ -31,10 +32,14 @@ export default function Home() {
 
   // Sample book trailers carousel
   const trailerExamples = [
-    { genre: "Thriller", title: "The Silent Echo", bg: "from-slate-900 to-gray-900" },
-    { genre: "Romance", title: "Moonlit Promises", bg: "from-gray-900 to-pink-900" },
-    { genre: "Sci-Fi", title: "Beyond the Nebula", bg: "from-gray-900 to-gray-900" },
-    { genre: "Mystery", title: "The Last Clue", bg: "from-slate-900 to-gray-900" },
+    { genre: "Sci-Fi", title: "Beyond the Nebula", image: "/images/examples/scifi-space-1762953366054.png" },
+    { genre: "Horror", title: "The Haunted Manor", image: "/images/examples/horror-mansion-1762953403955.png" },
+    { genre: "Adventure", title: "Temple of Secrets", image: "/images/examples/adventure-jungle-1762953455059.png" },
+    { genre: "Historical", title: "Echoes of War", image: "/images/examples/historical-war-1762953471442.png" },
+    { genre: "Thriller", title: "Urban Shadows", image: "/images/examples/urban-crime-1762953491364.png" },
+    { genre: "Fantasy", title: "Dragon's Legacy", image: "/images/examples/fantasy-dragon-1762953506535.png" },
+    { genre: "Romance", title: "Paris in Spring", image: "/images/examples/romance-paris-1762952208346.png" },
+    { genre: "Dystopian", title: "The Last City", image: "/images/examples/dystopian-city-1762952252197.png" },
   ]
 
   React.useEffect(() => {
@@ -226,17 +231,26 @@ export default function Home() {
             {trailerExamples.map((example, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 bg-gradient-to-br ${example.bg} flex items-center justify-center transition-opacity duration-1000 ${
+                className={`absolute inset-0 transition-opacity duration-1000 ${
                   index === currentTrailer ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <div className="text-center text-white space-y-4">
-                  <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg mb-4">
-                    <span className="text-sm font-semibold uppercase tracking-wider">{example.genre}</span>
-                  </div>
-                  <h3 className="text-5xl font-display font-bold">{example.title}</h3>
-                  <div className="flex items-center justify-center gap-4 pt-4">
-                    <RiPlayCircleLine className="w-16 h-16 hover:scale-110 transition-transform cursor-pointer" />
+                <Image
+                  src={example.image}
+                  alt={`${example.genre} trailer: ${example.title}`}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-center justify-center">
+                  <div className="text-center text-white space-y-4">
+                    <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg mb-4">
+                      <span className="text-sm font-semibold uppercase tracking-wider">{example.genre}</span>
+                    </div>
+                    <h3 className="text-5xl font-display font-bold">{example.title}</h3>
+                    <div className="flex items-center justify-center gap-4 pt-4">
+                      <RiPlayCircleLine className="w-16 h-16 hover:scale-110 transition-transform cursor-pointer" />
+                    </div>
                   </div>
                 </div>
               </div>
