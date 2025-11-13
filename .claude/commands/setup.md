@@ -105,7 +105,7 @@ OR disable for entire file at the top:
 
 For real issues, I'll help you fix them following the design system:
 
-**BookTrailer Pro Design System:**
+**LogoSmith Design System:**
 - **Primary:** Coral/Orange (#FF7F50, orange-500)
 - **Secondary:** Rose (#F43F5E, rose-500)
 - **Accent:** Lime (#84CC16, lime-500)
@@ -202,7 +202,7 @@ Before you start coding, verify:
 - [ ] `npx tsc --noEmit` passes
 - [ ] `npm run dev` works and site loads
 - [ ] Database connection works
-- [ ] You understand the design system (indigo/violet/cyan colors only)
+- [ ] You understand the design system (coral/orange/lime colors only)
 - [ ] You have API keys for development
 - [ ] You've read `DEVELOPER_SETUP.md`
 

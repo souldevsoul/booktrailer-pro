@@ -1,6 +1,6 @@
 # Feature Implementation Command
 
-You are helping a developer implement a new feature in the BookTrailer Pro application. Follow these steps to ensure a high-quality implementation.
+You are helping a developer implement a new feature in the LogoSmith application. Follow these steps to ensure a high-quality implementation.
 
 ## IMPORTANT: Run Setup First
 
@@ -74,7 +74,7 @@ You are helping a developer implement a new feature in the BookTrailer Pro appli
 
    **Review errors carefully:**
    - **False positives?** Document with inline comments explaining why
-   - **Real violations?** Fix them following BookTrailer Pro design system
+   - **Real violations?** Fix them following LogoSmith design system
    - **Unsure?** Ask for clarification before proceeding
 
    **Manual checks:**
@@ -85,7 +85,7 @@ You are helping a developer implement a new feature in the BookTrailer Pro appli
    - [ ] No console errors in browser
    - [ ] Loading states display correctly
    - [ ] Error handling works (test error scenarios)
-   - [ ] Design system colors used (indigo/violet/cyan, no indigo/blue/purple)
+   - [ ] Design system colors used (coral/orange/lime, no indigo/blue/purple)
 
 6. **Documentation**
    - Add comments for complex logic

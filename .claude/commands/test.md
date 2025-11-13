@@ -1,6 +1,6 @@
 # Testing Command
 
-You are helping test the BookTrailer Pro application systematically. Follow this comprehensive testing guide.
+You are helping test the LogoSmith application systematically. Follow this comprehensive testing guide.
 
 ## Testing Levels
 
@@ -138,7 +138,7 @@ If any of these fail, stop and fix before continuing.
 
 #### Footer
 - [ ] Payment logos present (Stripe, Visa, Mastercard, Amex)
-- [ ] Contact email correct: support@booktrailer.pro
+- [ ] Contact email correct: support@petportrait.ai
 - [ ] Social links work (if present)
 - [ ] All footer links work
 - [ ] Copyright year is current
