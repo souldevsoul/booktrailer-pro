@@ -1,6 +1,7 @@
 'use client'
 
 import { Header } from '@/components/marketing/layout'
+import { Footer } from '@/components/marketing/layout/footer'
 import { Container } from '@/components/ui/container'
 import { RiSparklingLine, RiVideoLine, RiBookLine, RiStarLine, RiTeamLine, RiLightbulbLine } from 'react-icons/ri'
 
@@ -234,6 +235,8 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+
+      <Footer />
     </main>
   )
 }
