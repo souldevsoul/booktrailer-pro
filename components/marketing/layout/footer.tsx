@@ -3,11 +3,9 @@ import {
   RiMailLine,
   RiPhoneLine,
   RiMapPinLine,
-  RiTwitterXFill,
-  RiLinkedinBoxFill,
-  RiGithubFill,
 } from "react-icons/ri"
 import { SiVisa, SiMastercard, SiApplepay, SiGooglepay } from "react-icons/si"
+import { Film } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -19,15 +17,20 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-display font-bold mb-6 text-gradient-primary">
-              BookTrailer Pro
-            </h3>
-            <p className="text-slate-300 mb-4 leading-relaxed">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow-indigo">
+                <Film className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-display font-bold text-white">
+                BookTrailer Pro
+              </h3>
+            </div>
+            <p className="text-slate-300 mb-6 leading-relaxed">
               Transform your books into cinematic trailers with AI-powered video generation.
             </p>
 
             {/* Payment Logos */}
-            <div className="mb-6">
+            <div>
               <p className="text-xs font-medium uppercase text-slate-400 mb-3">Accepted Payment Methods</p>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/20 flex items-center justify-center hover:bg-white/20 transition-colors">
@@ -44,42 +47,11 @@ export function Footer() {
                 </div>
               </div>
             </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              <a
-                href="https://twitter.com/booktrailerpro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center hover:bg-gray-600 hover:border-gray-500 transition-all hover:scale-105"
-                aria-label="Twitter"
-              >
-                <RiTwitterXFill className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com/company/booktrailerpro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center hover:bg-gray-600 hover:border-gray-500 transition-all hover:scale-105"
-                aria-label="LinkedIn"
-              >
-                <RiLinkedinBoxFill className="w-5 h-5" />
-              </a>
-              <a
-                href="https://github.com/booktrailerpro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center hover:bg-gray-600 hover:border-gray-500 transition-all hover:scale-105"
-                aria-label="GitHub"
-              >
-                <RiGithubFill className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-display font-bold mb-6 text-gray-400">
+            <h4 className="text-lg font-display font-bold mb-6 text-white">
               Product
             </h4>
             <ul className="space-y-3">
@@ -113,7 +85,7 @@ export function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h4 className="text-lg font-display font-bold mb-6 text-gray-400">
+            <h4 className="text-lg font-display font-bold mb-6 text-white">
               Legal & Policies
             </h4>
             <ul className="space-y-3">
@@ -157,7 +129,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-display font-bold mb-6 text-gray-400">
+            <h4 className="text-lg font-display font-bold mb-6 text-white">
               Contact Us
             </h4>
             <ul className="space-y-4">
