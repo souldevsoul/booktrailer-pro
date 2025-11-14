@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Header } from "@/components/marketing/layout/header"
 import { Footer } from "@/components/marketing/layout/footer"
 import {
   RiSparklingLine,
@@ -125,6 +126,20 @@ export default function PricingPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      {/* Header */}
+      <Header
+        logoText="BookTrailer Pro"
+        navLinks={[
+          { label: "Features", href: "/features" },
+          { label: "Pricing", href: "/pricing" },
+          { label: "About", href: "/about" },
+        ]}
+        ctaButton={{
+          text: "Try Free",
+          href: "/dashboard",
+        }}
+      />
+
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-50/30">
         <div className="max-w-7xl mx-auto px-6">
