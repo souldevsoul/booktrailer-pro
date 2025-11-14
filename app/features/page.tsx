@@ -1,6 +1,7 @@
 'use client'
 
 import { Header } from '@/components/marketing/layout'
+import { Footer } from '@/components/marketing/layout/footer'
 import { Container } from '@/components/ui/container'
 import {
   RiVideoLine, RiSparklingLine, RiMusicLine, RiPaletteLine,
@@ -276,6 +277,8 @@ export default function FeaturesPage() {
           </div>
         </Container>
       </section>
+
+      <Footer />
     </main>
   )
 }
