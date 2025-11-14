@@ -11,33 +11,33 @@ export default function RefundPolicyPage() {
   return (
     <main className="min-h-screen bg-white">
       <Header
-        logoText="VoiceCraft"
+        logoText="BookTrailer Pro"
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },
-          { label: "Demo", href: "/demo" },
+          { label: "About", href: "/#about" },
         ]}
         ctaButton={{
-          text: "Get Started",
-          href: "/signup",
+          text: "Try Free",
+          href: "/dashboard",
         }}
       />
 
       {/* Hero */}
-      <section className="py-20 border-b-8 border-black">
+      <section className="py-20 bg-gradient-to-br from-indigo-50 to-violet-50">
         <Container maxWidth="xl">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-yellow-400 border-4 border-black mb-8">
-              <RiRefundLine className="w-6 h-6" />
-              <span className="text-sm font-bold uppercase tracking-wider">Refund Policy</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-indigo-100 rounded-2xl shadow-cinema border border-slate-200 mb-8">
+              <RiRefundLine className="w-6 h-6 text-indigo-600" />
+              <span className="text-sm font-semibold tracking-wide text-indigo-600">Refund Policy</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold uppercase mb-6 leading-tight">
-              REFUND & RETURN POLICY
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+              Refund & Return Policy
             </h1>
             <p className="text-xl text-gray-700 mb-6">
-              Our commitment to customer satisfaction. Understand our refund and return policy for VoiceCraft services.
+              Our commitment to customer satisfaction. Understand our refund and return policy for BookTrailer Pro services.
             </p>
-            <p className="text-sm font-bold uppercase text-gray-900">
+            <p className="text-sm font-semibold text-gray-600">
               Last Updated: {lastUpdated}
             </p>
           </div>
@@ -51,25 +51,25 @@ export default function RefundPolicyPage() {
             {/* General Policy */}
             <div>
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
-                  <RiRefundLine className="w-6 h-6 text-yellow-400" />
+                <div className="w-12 h-12 bg-gradient-primary rounded-xl shadow-cinema flex items-center justify-center">
+                  <RiRefundLine className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold uppercase">1. General Refund Policy</h2>
+                <h2 className="text-3xl font-bold">1. General Refund Policy</h2>
               </div>
 
               <div className="space-y-4">
-                <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                  <h3 className="text-lg font-bold uppercase mb-3">Digital Service</h3>
+                <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Digital Service</h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    VoiceCraft is a digital service platform. Once voice generation or voice cloning services are rendered, they cannot be "returned" in the traditional sense as they are immediately consumed digital services.
+                    BookTrailer Pro is a digital service platform. Once book trailer generation services are rendered, they cannot be "returned" in the traditional sense as they are immediately consumed digital services.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     However, we stand behind the quality of our service and offer refunds under specific circumstances outlined below.
                   </p>
                 </div>
 
-                <div className="p-6 bg-yellow-50 border-4 border-black">
-                  <h3 className="text-lg font-bold uppercase mb-3">14-Day Free Trial</h3>
+                <div className="p-6 bg-indigo-50 rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">14-Day Free Trial</h3>
                   <p className="text-gray-700 leading-relaxed">
                     All Pro plan subscriptions include a 14-day free trial. You can cancel at any time during this trial period without being charged. No refund is necessary as no payment has been processed.
                   </p>
@@ -80,61 +80,61 @@ export default function RefundPolicyPage() {
             {/* Eligible Refunds */}
             <div>
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
-                  <RiCheckLine className="w-6 h-6 text-yellow-400" />
+                <div className="w-12 h-12 bg-gradient-primary rounded-xl shadow-cinema flex items-center justify-center">
+                  <RiCheckLine className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold uppercase">2. Eligible for Refund</h2>
+                <h2 className="text-3xl font-bold">2. Eligible for Refund</h2>
               </div>
 
               <div className="space-y-4">
-                <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                  <h3 className="text-lg font-bold uppercase mb-3">Technical Issues</h3>
+                <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Technical Issues</h3>
                   <p className="text-gray-700 leading-relaxed mb-3">
                     You are eligible for a full refund if:
                   </p>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-black font-bold">•</span>
+                      <span className="text-indigo-600 font-semibold">•</span>
                       Our service was unavailable for more than 24 consecutive hours
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-black font-bold">•</span>
+                      <span className="text-indigo-600 font-semibold">•</span>
                       You experienced repeated technical errors preventing service usage
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-black font-bold">•</span>
-                      Voice generation consistently failed to produce output
+                      <span className="text-indigo-600 font-semibold">•</span>
+                      Book trailer generation consistently failed to produce output
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-black font-bold">•</span>
+                      <span className="text-indigo-600 font-semibold">•</span>
                       We were unable to resolve technical issues within 48 hours of your support request
                     </li>
                   </ul>
                 </div>
 
-                <div className="p-6 bg-yellow-50 border-4 border-black">
-                  <h3 className="text-lg font-bold uppercase mb-3">Billing Errors</h3>
+                <div className="p-6 bg-indigo-50 rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Billing Errors</h3>
                   <p className="text-gray-700 leading-relaxed mb-3">
                     You are eligible for a refund if:
                   </p>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-black font-bold">•</span>
+                      <span className="text-indigo-600 font-semibold">•</span>
                       You were charged incorrectly due to our billing system error
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-black font-bold">•</span>
+                      <span className="text-indigo-600 font-semibold">•</span>
                       You were double-charged for the same subscription period
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-black font-bold">•</span>
+                      <span className="text-indigo-600 font-semibold">•</span>
                       You were charged after cancellation was processed
                     </li>
                   </ul>
                 </div>
 
-                <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                  <h3 className="text-lg font-bold uppercase mb-3">First-Time Subscription</h3>
+                <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">First-Time Subscription</h3>
                   <p className="text-gray-700 leading-relaxed">
                     For first-time paid subscribers who are not satisfied with the service, you may request a refund within 7 days of your first charge. This one-time courtesy refund is available once per customer.
                   </p>
@@ -145,37 +145,37 @@ export default function RefundPolicyPage() {
             {/* Not Eligible */}
             <div>
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
-                  <RiTimeLine className="w-6 h-6 text-yellow-400" />
+                <div className="w-12 h-12 bg-gradient-primary rounded-xl shadow-cinema flex items-center justify-center">
+                  <RiTimeLine className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold uppercase">3. Not Eligible for Refund</h2>
+                <h2 className="text-3xl font-bold">3. Not Eligible for Refund</h2>
               </div>
 
-              <div className="p-6 bg-black text-white border-4 border-black brutalist-shadow-yellow">
-                <h3 className="text-lg font-bold uppercase mb-4 text-yellow-400">The Following Are NOT Eligible:</h3>
+              <div className="p-6 bg-gradient-dark text-white rounded-2xl shadow-cinema border border-slate-700">
+                <h3 className="text-lg font-semibold mb-4 text-indigo-300">The Following Are NOT Eligible:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
-                    <span className="text-yellow-400 font-bold">•</span>
+                    <span className="text-indigo-300 font-semibold">•</span>
                     <span>Change of mind after using the service</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-yellow-400 font-bold">•</span>
-                    <span>Dissatisfaction with AI-generated voice quality (subjective opinion)</span>
+                    <span className="text-indigo-300 font-semibold">•</span>
+                    <span>Dissatisfaction with AI-generated book trailer quality (subjective opinion)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-yellow-400 font-bold">•</span>
-                    <span>Already used character credits (partial refunds not available)</span>
+                    <span className="text-indigo-300 font-semibold">•</span>
+                    <span>Already used video generation credits (partial refunds not available)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-yellow-400 font-bold">•</span>
+                    <span className="text-indigo-300 font-semibold">•</span>
                     <span>Cancellation after the refund eligibility period has passed</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-yellow-400 font-bold">•</span>
+                    <span className="text-indigo-300 font-semibold">•</span>
                     <span>Violation of our Terms of Service resulting in account termination</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-yellow-400 font-bold">•</span>
+                    <span className="text-indigo-300 font-semibold">•</span>
                     <span>Third-party API costs incurred (we pass through costs from Replicate)</span>
                   </li>
                 </ul>
@@ -185,19 +185,19 @@ export default function RefundPolicyPage() {
             {/* Refund Process */}
             <div>
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
-                  <RiMailLine className="w-6 h-6 text-yellow-400" />
+                <div className="w-12 h-12 bg-gradient-primary rounded-xl shadow-cinema flex items-center justify-center">
+                  <RiMailLine className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold uppercase">4. How to Request a Refund</h2>
+                <h2 className="text-3xl font-bold">4. How to Request a Refund</h2>
               </div>
 
               <div className="space-y-4">
-                <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                  <h3 className="text-lg font-bold uppercase mb-3">Step 1: Contact Support</h3>
+                <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Step 1: Contact Support</h3>
                   <p className="text-gray-700 leading-relaxed mb-3">
                     Email our support team at{" "}
-                    <a href="mailto:support@voicecraft.ai" className="font-bold underline hover:no-underline">
-                      support@voicecraft.ai
+                    <a href="mailto:support@booktrailer.pro" className="font-semibold underline hover:no-underline text-indigo-600">
+                      support@booktrailer.pro
                     </a>{" "}
                     with the subject line "Refund Request"
                   </p>
@@ -206,20 +206,20 @@ export default function RefundPolicyPage() {
                   </p>
                 </div>
 
-                <div className="p-6 bg-yellow-50 border-4 border-black">
-                  <h3 className="text-lg font-bold uppercase mb-3">Step 2: Review Process</h3>
+                <div className="p-6 bg-indigo-50 rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Step 2: Review Process</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Our team will review your request within 2-3 business days. We may contact you for additional information or to attempt to resolve any technical issues.
                   </p>
                 </div>
 
-                <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                  <h3 className="text-lg font-bold uppercase mb-3">Step 3: Decision & Processing</h3>
+                <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Step 3: Decision & Processing</h3>
                   <p className="text-gray-700 leading-relaxed mb-3">
                     If approved, refunds are processed within 5-7 business days. Refunds are issued to the original payment method.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    <span className="font-bold">Note:</span> Depending on your bank or card issuer, it may take an additional 3-5 business days for the refund to appear in your account.
+                    <span className="font-semibold">Note:</span> Depending on your bank or card issuer, it may take an additional 3-5 business days for the refund to appear in your account.
                   </p>
                 </div>
               </div>
@@ -227,24 +227,24 @@ export default function RefundPolicyPage() {
 
             {/* Cancellation */}
             <div>
-              <div className="p-8 bg-yellow-400 border-4 border-black brutalist-shadow">
-                <h2 className="text-2xl font-bold uppercase mb-4">CANCELLATION VS. REFUND</h2>
-                <p className="text-gray-900 leading-relaxed mb-4">
-                  <span className="font-bold">Cancellation:</span> You can cancel your subscription at any time through your account settings. You will retain access until the end of your current billing period, but no refund will be issued for the remaining time.
+              <div className="p-8 bg-gradient-primary rounded-2xl shadow-cinema text-white">
+                <h2 className="text-2xl font-bold mb-4">Cancellation vs. Refund</h2>
+                <p className="leading-relaxed mb-4">
+                  <span className="font-semibold">Cancellation:</span> You can cancel your subscription at any time through your account settings. You will retain access until the end of your current billing period, but no refund will be issued for the remaining time.
                 </p>
-                <p className="text-gray-900 leading-relaxed">
-                  <span className="font-bold">Refund:</span> A refund returns money already paid and is only available under the eligible circumstances outlined above.
+                <p className="leading-relaxed">
+                  <span className="font-semibold">Refund:</span> A refund returns money already paid and is only available under the eligible circumstances outlined above.
                 </p>
               </div>
             </div>
 
             {/* Enterprise */}
             <div>
-              <div className="p-6 bg-black text-white border-4 border-black brutalist-shadow-yellow">
-                <h2 className="text-2xl font-bold uppercase mb-4 text-yellow-400">
-                  ENTERPRISE CUSTOMERS
+              <div className="p-6 bg-gradient-dark text-white rounded-2xl shadow-cinema border border-slate-700">
+                <h2 className="text-2xl font-bold mb-4 text-indigo-300">
+                  Enterprise Customers
                 </h2>
-                <p className="text-white leading-relaxed">
+                <p className="leading-relaxed">
                   Enterprise customers with custom contracts should refer to their specific Service Level Agreement (SLA) for refund terms. Enterprise refund policies may differ from standard plans.
                 </p>
               </div>
@@ -252,21 +252,21 @@ export default function RefundPolicyPage() {
 
             {/* Contact */}
             <div>
-              <div className="p-8 bg-white border-4 border-black brutalist-shadow text-center">
-                <h2 className="text-2xl font-bold uppercase mb-4">QUESTIONS?</h2>
+              <div className="p-8 bg-white rounded-2xl shadow-cinema border border-slate-200 text-center">
+                <h2 className="text-2xl font-bold mb-4">Questions?</h2>
                 <p className="text-gray-700 mb-6">
                   If you have questions about our refund policy, please contact us:
                 </p>
                 <div className="space-y-2">
                   <p>
-                    <span className="font-bold">Email:</span>{" "}
-                    <a href="mailto:support@voicecraft.ai" className="underline hover:no-underline">
-                      support@voicecraft.ai
+                    <span className="font-semibold">Email:</span>{" "}
+                    <a href="mailto:support@booktrailer.pro" className="underline hover:no-underline text-indigo-600">
+                      support@booktrailer.pro
                     </a>
                   </p>
                   <p>
-                    <span className="font-bold">Phone:</span>{" "}
-                    <a href="tel:+14155551234" className="underline hover:no-underline">
+                    <span className="font-semibold">Phone:</span>{" "}
+                    <a href="tel:+14155551234" className="underline hover:no-underline text-indigo-600">
                       +1 (415) 555-1234
                     </a>
                   </p>
