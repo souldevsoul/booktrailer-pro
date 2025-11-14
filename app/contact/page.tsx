@@ -105,7 +105,7 @@ export default function ContactPage() {
               <span className="text-sm font-display font-bold text-white tracking-wider">Contact Us</span>
             </div>
             <h1 className="text-6xl md:text-7xl font-display font-bold mb-6 leading-tight text-white">
-              We're Here to Help
+              We&apos;re Here to Help
             </h1>
             <p className="text-xl text-slate-300 mb-8">
               Have questions? Need support? Want to discuss enterprise options? Our team is ready to assist you.
@@ -176,7 +176,7 @@ export default function ContactPage() {
                 Send Us a Message
               </h2>
               <p className="text-xl text-slate-600">
-                Fill out the form and we'll get back to you as soon as possible
+                Fill out the form and we&apos;ll get back to you as soon as possible
               </p>
             </div>
 
@@ -292,7 +292,7 @@ export default function ContactPage() {
               Common Support Topics
             </h2>
             <p className="text-xl text-slate-600">
-              Reach out about any of these topics—we're here to help
+              Reach out about any of these topics—we&apos;re here to help
             </p>
           </div>
 

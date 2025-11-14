@@ -189,7 +189,7 @@ export default function Home() {
             {/* Subtitle */}
             <div className={`transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <Text variant="lead" className="text-slate-700 max-w-3xl mx-auto text-xl md:text-2xl font-medium leading-relaxed">
-                Create stunning, professional book trailers in minutes. AI-powered video generation that captures your story's essence and drives reader engagement.
+                Create stunning, professional book trailers in minutes. AI-powered video generation that captures your story&apos;s essence and drives reader engagement.
               </Text>
             </div>
 

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { getCurrentUser } from '@/lib/get-current-user'
+import type { Prisma } from '@prisma/client'
 
 // GET /api/music/library - Get available music tracks
 // Supports filtering by genre, mood, tempo, and premium status
@@ -17,7 +18,7 @@ export async function GET(request: NextRequest) {
     const freeOnly = searchParams.get('free') === 'true'
 
     // Build where clause
-    const where: any = {}
+    const where: Prisma.MusicTrackWhereInput = {}
 
     if (genre) {
       where.genre = {

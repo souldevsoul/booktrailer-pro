@@ -30,7 +30,7 @@ const BookCreateSchema = z.object({
 })
 
 // GET /api/books - List all books for the current user
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const user = await requireAuth()
     const userId = user.id

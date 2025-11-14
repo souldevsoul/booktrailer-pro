@@ -80,7 +80,7 @@ export default function AboutPage() {
               Empowering Authors with Cinematic Video Marketing
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              We're making professional book trailer creation accessible to every author. Transform your story into a cinematic visual experience with AI-powered video generation.
+              We&apos;re making professional book trailer creation accessible to every author. Transform your story into a cinematic visual experience with AI-powered video generation.
             </p>
           </div>
         </Container>
@@ -98,7 +98,7 @@ export default function AboutPage() {
                 Every book has a story that deserves to be seen, not just read. Video is the most powerful marketing tool available today, but professional video production has been inaccessible for most authors.
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                We built BookTrailer Pro to change that. By leveraging AI video generation technology, we're making studio-quality book trailers accessible to everyone—from indie authors to major publishers.
+                We built BookTrailer Pro to change that. By leveraging AI video generation technology, we&apos;re making studio-quality book trailers accessible to everyone—from indie authors to major publishers.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our platform uses <span className="font-semibold text-primary">MiniMax Video-01</span> for cinematic video generation and <span className="font-semibold text-primary">OpenAI GPT-4</span> for intelligent scene extraction. These proven AI models power professional results at a fraction of traditional costs.
@@ -192,7 +192,7 @@ export default function AboutPage() {
               <RiSparklingLine className="w-12 h-12 text-secondary mb-4" />
               <h3 className="text-2xl font-semibold mb-3">OpenAI GPT-4</h3>
               <p className="text-gray-600 mb-4">
-                Intelligent scene generation from your book's synopsis and key moments
+                Intelligent scene generation from your book&apos;s synopsis and key moments
               </p>
               <div className="text-sm text-gray-500">GPT-4o-mini, optimized for speed</div>
             </div>

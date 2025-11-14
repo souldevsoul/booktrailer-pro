@@ -116,7 +116,7 @@ export async function POST(
     })
 
     // Save new scenes to database
-    const createdScenes = await prisma.scene.createMany({
+    await prisma.scene.createMany({
       data: scenes.map((scene, index) => ({
         bookId,
         order: scene.order || index + 1,

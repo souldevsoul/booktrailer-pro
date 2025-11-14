@@ -311,7 +311,7 @@ export default function DeliveryPolicyPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold text-indigo-300">5.</span>
-                    <span>Contact support@booktrailer.pro immediately - we'll resolve within 24 hours</span>
+                    <span>Contact support@booktrailer.pro immediately - we&apos;ll resolve within 24 hours</span>
                   </li>
                 </ol>
               </div>

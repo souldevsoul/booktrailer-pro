@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { requireAuth } from '@/lib/get-current-user'
-import { JsonValue } from '@prisma/client/runtime/library'
 
 // Validation schema for share tracking
 const ShareSchema = z.object({

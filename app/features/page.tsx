@@ -174,7 +174,7 @@ export default function FeaturesPage() {
               Everything You Need to Create Stunning Book Trailers
             </h1>
             <p className="text-xl text-gray-600">
-              Powered by the world's most advanced AI models. Built for authors, publishers, and literary marketers who demand the best.
+              Powered by the world&apos;s most advanced AI models. Built for authors, publishers, and literary marketers who demand the best.
             </p>
           </div>
         </Container>

@@ -239,7 +239,7 @@ export default function BlogPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => {
-              const tagIcons: { [key: string]: any } = {
+              const tagIcons: Record<string, React.ComponentType<{ className?: string }>> = {
                 Popular: RiFireLine,
                 Technical: RiCodeLine,
                 Beginner: RiLightbulbLine,

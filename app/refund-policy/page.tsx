@@ -61,7 +61,7 @@ export default function RefundPolicyPage() {
                 <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
                   <h3 className="text-lg font-semibold mb-3 text-indigo-900">Digital Service</h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    BookTrailer Pro is a digital service platform. Once book trailer generation services are rendered, they cannot be "returned" in the traditional sense as they are immediately consumed digital services.
+                    BookTrailer Pro is a digital service platform. Once book trailer generation services are rendered, they cannot be &quot;returned&quot; in the traditional sense as they are immediately consumed digital services.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     However, we stand behind the quality of our service and offer refunds under specific circumstances outlined below.
@@ -199,7 +199,7 @@ export default function RefundPolicyPage() {
                     <a href="mailto:support@booktrailer.pro" className="font-semibold underline hover:no-underline text-indigo-600">
                       support@booktrailer.pro
                     </a>{" "}
-                    with the subject line "Refund Request"
+                    with the subject line &quot;Refund Request&quot;
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     Include: Your account email, reason for refund request, order/transaction ID, and any supporting documentation (screenshots, error messages, etc.)

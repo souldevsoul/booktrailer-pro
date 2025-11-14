@@ -320,7 +320,7 @@ export default function TermsPage() {
                   <h3 className="text-lg font-semibold">Liability</h3>
                 </div>
                 <p className="text-gray-600 text-sm">
-                  Service provided "as is." Our liability is limited. You're responsible for your use of generated content.
+                  Service provided &quot;as is.&quot; Our liability is limited. You&apos;re responsible for your use of generated content.
                 </p>
               </div>
               <div className="p-6 bg-white rounded-lg shadow-minimal-md border border-gray-200">

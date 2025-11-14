@@ -312,7 +312,7 @@ export default function PrivacyPage() {
                   <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center">
                     <RiUserLine className="w-6 h-6 text-white" />
                   </div>
-                  <h2 className="text-3xl font-display font-bold">9. Children's Privacy</h2>
+                  <h2 className="text-3xl font-display font-bold">9. Children&apos;s Privacy</h2>
                 </div>
               </div>
 
@@ -341,7 +341,7 @@ export default function PrivacyPage() {
                   We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  When we make material changes, we will notify you by email (to the address associated with your account) and/or by posting a notice on our website. We will also update the "Last Updated" date at the top of this policy.
+                  When we make material changes, we will notify you by email (to the address associated with your account) and/or by posting a notice on our website. We will also update the &quot;Last Updated&quot; date at the top of this policy.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   Your continued use of BookTrailer Pro after any changes to this Privacy Policy constitutes your acceptance of the updated policy.
@@ -363,7 +363,7 @@ export default function PrivacyPage() {
               Questions About Privacy?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              If you have questions about this Privacy Policy or how we handle your data, we're here to help.
+              If you have questions about this Privacy Policy or how we handle your data, we&apos;re here to help.
             </p>
 
             <div className="p-8 bg-white text-gray-900 rounded-lg shadow-minimal-lg">
