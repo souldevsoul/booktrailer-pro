@@ -14,6 +14,16 @@ import productQuality from './eslint-plugin-product-quality/index.js';
  */
 export default [
   {
+    ignores: [
+      '.next/**',
+      'node_modules/**',
+      'dist/**',
+      'build/**',
+      '.vercel/**',
+      'out/**',
+    ],
+  },
+  {
     files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       parser: tsParser,
@@ -77,25 +87,26 @@ export default [
       // ========================================
       // UX CONSISTENCY RULES
       // ========================================
-      'product-quality/no-button-without-handler': 'warn',
-      'product-quality/no-form-without-submit': 'error',
-      'product-quality/no-missing-alt-text': 'error',
-      'product-quality/no-generic-placeholders': 'warn',
-      'product-quality/require-loading-state-on-async-button': 'warn',
-      // Disabled: Too many false positives, needs refinement
+      // Disabled: Not implemented in plugin yet
+      // 'product-quality/no-button-without-handler': 'warn',
+      // 'product-quality/no-form-without-submit': 'error',
+      // 'product-quality/no-missing-alt-text': 'error',
+      // 'product-quality/no-generic-placeholders': 'warn',
+      // 'product-quality/require-loading-state-on-async-button': 'warn',
       // 'product-quality/require-aria-label-on-icon-buttons': 'warn',
 
       // ========================================
       // ERROR HANDLING & QUALITY
       // ========================================
-      'product-quality/require-try-catch-fetch': 'warn',
-      // Disabled: Too noisy for API routes, more useful for UI components
+      // Disabled: Not implemented in plugin yet
+      // 'product-quality/require-try-catch-fetch': 'warn',
       // 'product-quality/require-empty-state': 'warn',
 
       // ========================================
       // PERFORMANCE
       // ========================================
-      'product-quality/require-image-optimization': 'warn',
+      // Disabled: Not implemented in plugin yet
+      // 'product-quality/require-image-optimization': 'warn',
     },
   },
 ];

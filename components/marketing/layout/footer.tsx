@@ -166,10 +166,10 @@ export function Footer() {
                 <div>
                   <div className="text-sm font-medium uppercase text-slate-400 mb-1">Email</div>
                   <a
-                    href="mailto:support@booktrailerpro.com"
+                    href="mailto:support@booktrailer.pro"
                     className="text-white hover:text-gray-400 transition-colors"
                   >
-                    support@booktrailerpro.com
+                    support@booktrailer.pro
                   </a>
                 </div>
               </li>

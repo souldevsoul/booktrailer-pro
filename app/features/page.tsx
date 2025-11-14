@@ -1,380 +1,281 @@
-"use client"
+'use client'
 
-import { Container } from "@/components/ui/container"
-import { Button } from "@/components/ui/button"
-import { Header } from "@/components/marketing/layout/header"
-import { Footer } from "@/components/marketing/layout/footer"
+import { Header } from '@/components/marketing/layout'
+import { Container } from '@/components/ui/container'
 import {
-  RiSparklingLine,
-  RiMicLine,
-  RiFlashlightLine,
-  RiShieldCheckLine,
-  RiGlobalLine,
-  RiHeadphoneLine,
-  RiSettings4Line,
-  RiVoiceprintLine,
-  RiTimerLine,
-  RiDatabase2Line,
-  RiCodeLine,
-  RiTeamLine,
-  RiArrowRightLine,
-  RiCheckDoubleLine,
-  RiSoundModuleLine,
-} from "react-icons/ri"
+  RiVideoLine, RiSparklingLine, RiMusicLine, RiPaletteLine,
+  RiDownloadLine, RiShareLine, RiTimerLine, RiShieldCheckLine,
+  RiTeamLine, RiLineChartLine, RiGlobalLine, RiStarLine
+} from 'react-icons/ri'
 
 export default function FeaturesPage() {
-  const mainFeatures = [
+  const features = [
     {
-      icon: RiSparklingLine,
-      title: "Powered by Kokoro-82M",
-      subtitle: "56M+ RUNS - MOST POPULAR MODEL",
-      description: "Built on the world's most popular voice synthesis model. Battle-tested at massive scale with 56.7 million production runs. Proven reliability, exceptional quality, lightning-fast inference.",
-      features: [
-        "82M parameters based on StyleTTS2",
-        "Natural-sounding speech synthesis",
-        "Multiple voice profiles available",
-        "Automatic long text splitting",
-        "Speed control from 0.1x to 5.0x",
-        "Lightweight and efficient"
+      icon: <RiVideoLine className="w-12 h-12" />,
+      title: "AI Video Generation",
+      description: "Create cinematic book trailers using MiniMax Video-01, the leading text-to-video AI model. Professional quality results in minutes, not days.",
+      highlights: [
+        "6-second cinematic clips",
+        "Multiple visual styles",
+        "Genre-optimized prompts",
+        "Professional filmmaking quality"
       ]
     },
     {
-      icon: RiMicLine,
-      title: "Advanced Voice Cloning",
-      subtitle: "MINIMAX TECHNOLOGY",
-      description: "Clone any voice with Minimax's cutting-edge voice cloning technology. Quick training from just 10 seconds to 5 minutes of audio. Create custom voice profiles that work across all our synthesis models.",
-      features: [
-        "300+ preset voices included",
-        "Custom voice training in minutes",
-        "Noise reduction & volume normalization",
-        "Works with Speech 2.6 Turbo & HD",
-        "Quality validation built-in",
-        "Voice ID generation"
+      icon: <RiSparklingLine className="w-12 h-12" />,
+      title: "Smart Scene Generation",
+      description: "AI analyzes your book synopsis and automatically generates 5-8 key scenes. Powered by OpenAI GPT-4 for intelligent story understanding.",
+      highlights: [
+        "Auto-extract key moments",
+        "Visual prompt generation",
+        "Mood and pacing analysis",
+        "Edit and refine scenes"
       ]
     },
     {
-      icon: RiFlashlightLine,
-      title: "Real-Time Synthesis",
-      subtitle: "LIGHTNING FAST PERFORMANCE",
-      description: "Generate professional voice content in seconds, not minutes. Minimax 2.6 Turbo optimized for real-time applications with minimal latency. Perfect for live applications, chatbots, and streaming.",
-      features: [
-        "Sub-second response times",
-        "Real-time streaming support",
-        "Batch processing for efficiency",
-        "Queue management for scale",
-        "Concurrent request handling",
-        "CDN-optimized audio delivery"
+      icon: <RiMusicLine className="w-12 h-12" />,
+      title: "Music Library",
+      description: "Choose from our curated library of royalty-free music tracks. Every genre and mood covered - from epic orchestral to intimate piano.",
+      highlights: [
+        "12 free tracks",
+        "Premium music collection",
+        "Genre-matched suggestions",
+        "Multiple moods and tempos"
       ]
     },
     {
-      icon: RiSettings4Line,
-      title: "Emotion & Expression Control",
-      subtitle: "NATURAL EMOTIONAL DELIVERY",
-      description: "Fine-tune every aspect of voice delivery. Control emotion, pitch, speed, and volume to create the perfect voice for your content. From happy and excited to calm and serious - full emotional range.",
-      features: [
-        "8 emotion presets (happy, sad, angry, etc.)",
-        "Automatic emotion detection",
-        "Pitch adjustment (-12 to +12 semitones)",
-        "Speed control (0.5x to 2.0x)",
-        "Volume control (0 to 10)",
-        "Temperature control for variance"
+      icon: <RiPaletteLine className="w-12 h-12" />,
+      title: "5 Cinematic Styles",
+      description: "Choose the perfect visual style for your book's genre. From dramatic thrillers to whimsical fantasy - we have your aesthetic covered.",
+      highlights: [
+        "Dramatic - High contrast, emotional",
+        "Epic - Grand scale, sweeping",
+        "Intimate - Close-ups, soft lighting",
+        "Suspenseful - Dark, mysterious",
+        "Whimsical - Bright, magical"
       ]
     },
     {
-      icon: RiGlobalLine,
-      title: "Multilingual Support",
-      subtitle: "50+ LANGUAGES",
-      description: "Generate voices in 50+ languages with native accents and natural intonation. Powered by Minimax and XTTS-v2 for global reach. Cross-language voice transfer supported.",
-      features: [
-        "50+ languages (Minimax)",
-        "17 languages with voice cloning (XTTS-v2)",
-        "Native accent support",
-        "Natural cross-language intonation",
-        "Language-specific normalization",
-        "Automatic language detection"
+      icon: <RiTimerLine className="w-12 h-12" />,
+      title: "Lightning Fast",
+      description: "Generate professional trailers in minutes. Upload your book details, customize scenes, and get your video - all in under 5 minutes.",
+      highlights: [
+        "2-5 min video generation",
+        "Real-time progress tracking",
+        "Async processing",
+        "Email notifications when ready"
       ]
     },
     {
-      icon: RiHeadphoneLine,
-      title: "Studio Quality Audio",
-      subtitle: "PROFESSIONAL OUTPUT",
-      description: "Professional-grade audio output at up to 48kHz sample rate. Multiple format support including MP3, WAV, FLAC, and PCM. Perfect for podcasts, audiobooks, videos, and commercial production.",
-      features: [
-        "48kHz sample rate (max)",
-        "MP3, WAV, FLAC, PCM formats",
-        "Configurable bitrates",
-        "Mono & stereo channel support",
-        "Subtitle export with timestamps",
-        "High-fidelity output"
+      icon: <RiDownloadLine className="w-12 h-12" />,
+      title: "Multiple Export Formats",
+      description: "Download your trailer in formats optimized for every platform. YouTube, Instagram, TikTok, Facebook - we have got you covered.",
+      highlights: [
+        "16:9 for YouTube",
+        "9:16 for TikTok/Instagram Stories",
+        "1:1 for Instagram Feed",
+        "HD and 4K quality options"
       ]
     },
     {
-      icon: RiShieldCheckLine,
-      title: "Security & Privacy",
-      subtitle: "ENTERPRISE-GRADE PROTECTION",
-      description: "Your voice data is encrypted end-to-end and never shared with third parties. Full GDPR compliance, SOC 2 Type II certified. Enterprise-grade security for peace of mind.",
-      features: [
-        "End-to-end encryption",
-        "GDPR compliant",
-        "SOC 2 Type II certified",
-        "Data residency options",
-        "Zero data retention (optional)",
-        "Audit logs & compliance reports"
+      icon: <RiShareLine className="w-12 h-12" />,
+      title: "Social Media Ready",
+      description: "Share directly to your social platforms or download for manual posting. Built-in analytics track views, shares, and engagement.",
+      highlights: [
+        "One-click social sharing",
+        "Embeddable trailer player",
+        "Copy shareable links",
+        "Track trailer performance"
       ]
     },
     {
-      icon: RiVoiceprintLine,
-      title: "Voice Library Management",
-      subtitle: "ORGANIZE YOUR VOICES",
-      description: "Manage unlimited custom voice clones. Organize, preview, edit, and delete voice profiles. Search and filter your voice library. Track usage statistics for each voice.",
-      features: [
-        "Unlimited voice storage (Enterprise)",
-        "Voice preview & testing",
-        "Metadata & descriptions",
-        "Usage analytics per voice",
-        "Batch operations",
-        "Import/export voice profiles"
+      icon: <RiShieldCheckLine className="w-12 h-12" />,
+      title: "Commercial Rights",
+      description: "Full commercial rights to all generated trailers. Use them anywhere - your website, social media, ads, book launches, presentations.",
+      highlights: [
+        "100% commercial usage rights",
+        "No watermarks (paid plans)",
+        "Royalty-free music included",
+        "Lifetime access to downloads"
       ]
     },
     {
-      icon: RiTimerLine,
-      title: "Advanced Text Processing",
-      subtitle: "INTELLIGENT TEXT HANDLING",
-      description: "Automatic text splitting for long content. Pause markers for timing control. Number and date normalization. SSML support for advanced control over pronunciation and delivery.",
-      features: [
-        "Automatic long text splitting",
-        "Pause markers (<#0.5#>)",
-        "Number & date normalization",
-        "Custom pronunciation dictionary",
-        "SSML markup support (coming soon)",
-        "Character limit: 10,000 per request"
+      icon: <RiTeamLine className="w-12 h-12" />,
+      title: "Publisher Accounts",
+      description: "Manage multiple authors and books from one dashboard. Perfect for publishing houses with large catalogs.",
+      highlights: [
+        "Unlimited books (Enterprise)",
+        "Team collaboration",
+        "Bulk generation",
+        "Centralized billing"
       ]
     },
     {
-      icon: RiDatabase2Line,
-      title: "Usage & Analytics",
-      subtitle: "TRACK YOUR USAGE",
-      description: "Comprehensive analytics dashboard showing character usage, voice generation history, model performance, and cost tracking. Export reports for accounting and billing.",
-      features: [
-        "Real-time usage tracking",
-        "Character count analytics",
-        "Generation history",
-        "Cost estimation & tracking",
-        "Export reports (CSV, PDF)",
-        "Webhook notifications"
+      icon: <RiLineChartLine className="w-12 h-12" />,
+      title: "Analytics Dashboard",
+      description: "Track trailer performance across platforms. See views, engagement, and conversion metrics in one place.",
+      highlights: [
+        "View counts and watch time",
+        "Social media engagement",
+        "Click-through rates",
+        "Export detailed reports"
       ]
     },
     {
-      icon: RiCodeLine,
-      title: "Developer API",
-      subtitle: "FULL API ACCESS",
-      description: "Complete REST API with comprehensive documentation. SDKs available for Node.js, Python, Go, and more. Webhook support for async operations. Rate limiting and authentication included.",
-      features: [
-        "RESTful API",
-        "Official SDKs (Node.js, Python, Go)",
-        "Webhook support",
-        "Rate limiting & quotas",
-        "API key management",
-        "Detailed error messages"
+      icon: <RiGlobalLine className="w-12 h-12" />,
+      title: "Multi-Genre Support",
+      description: "Optimized visual styles for 8+ genres. Each genre gets custom prompts, pacing, and music recommendations.",
+      highlights: [
+        "Thriller & Mystery",
+        "Romance & Contemporary",
+        "Sci-Fi & Fantasy",
+        "Literary & Historical"
       ]
     },
     {
-      icon: RiTeamLine,
-      title: "Team Collaboration",
-      subtitle: "WORK TOGETHER",
-      description: "Built for teams. Share voice clones across your organization. Role-based access control. Team analytics and usage tracking. Centralized billing and management.",
-      features: [
-        "Unlimited team members (Enterprise)",
-        "Role-based permissions",
-        "Shared voice library",
-        "Team usage analytics",
-        "Centralized billing",
-        "SSO integration (Enterprise)"
+      icon: <RiStarLine className="w-12 h-12" />,
+      title: "Premium Templates",
+      description: "Access exclusive trailer templates designed by professional videographers. Save time with pre-built structures.",
+      highlights: [
+        "20+ professional templates",
+        "Genre-specific layouts",
+        "Customizable scenes",
+        "Regular template updates"
       ]
-    },
+    }
   ]
 
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
       <Header
-        logoText="VoiceCraft"
+        logoText="BookTrailer Pro"
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },
-          { label: "Demo", href: "/demo" },
+          { label: "Studio", href: "/studio" },
         ]}
         ctaButton={{
-          text: "Get Started",
-          href: "/signup",
+          text: "Create Trailer",
+          href: "/studio",
         }}
       />
 
-      {/* Hero Section */}
-      <section className="py-20 border-b-8 border-black">
+      {/* Hero */}
+      <section className="py-20 border-b border-gray-200">
         <Container maxWidth="xl">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-yellow-400 border-4 border-black mb-8">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-secondary text-white rounded-full mb-8">
               <RiSparklingLine className="w-6 h-6" />
-              <span className="text-sm font-bold uppercase tracking-wider">Features</span>
+              <span className="text-sm font-semibold uppercase tracking-wider">Features</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold uppercase mb-6 leading-tight">
-              EVERYTHING YOU NEED FOR PROFESSIONAL VOICE CONTENT
+            <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 leading-tight">
+              Everything You Need to Create Stunning Book Trailers
             </h1>
-            <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
-              Powered by the world's most popular voice models. Built for creators, businesses, and developers who demand the best.
+            <p className="text-xl text-gray-600">
+              Powered by the world's most advanced AI models. Built for authors, publishers, and literary marketers who demand the best.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="lg"
-                className="gap-3 bg-black text-yellow-400 border-4 border-black font-bold uppercase"
-              >
-                <RiArrowRightLine className="w-5 h-5" />
-                Start Free Trial
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="gap-3 border-4 border-black font-bold uppercase"
-              >
-                View Pricing
-              </Button>
-            </div>
           </div>
         </Container>
       </section>
 
-      {/* Model Stats */}
-      <section className="py-16 bg-black border-b-8 border-yellow-400">
-        <Container maxWidth="xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-5xl font-bold text-yellow-400 mb-2 uppercase">56.7M+</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Kokoro Runs</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold text-yellow-400 mb-2 uppercase">50+</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Languages</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold text-yellow-400 mb-2 uppercase">300+</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Voices</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold text-yellow-400 mb-2 uppercase">48kHz</div>
-              <div className="text-sm font-bold text-white uppercase tracking-wider">Audio Quality</div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Main Features Grid */}
+      {/* Features Grid */}
       <section className="py-24">
         <Container maxWidth="xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mainFeatures.map((feature, index) => {
-              const Icon = feature.icon
-              const bgColors = ["bg-white", "bg-black", "bg-yellow-400"]
-              const textColors = ["text-black", "text-yellow-400", "text-black"]
-              const subtitleColors = ["text-gray-600", "text-white", "text-gray-900"]
-              const colorIndex = index % 3
-
-              return (
-                <div
-                  key={index}
-                  className={`p-8 ${bgColors[colorIndex]} border-4 border-black ${
-                    colorIndex === 1 ? "brutalist-shadow-yellow" : "brutalist-shadow"
-                  }`}
-                >
-                  <div className={`w-16 h-16 ${colorIndex === 1 ? "bg-yellow-400" : "bg-black"} flex items-center justify-center mb-6`}>
-                    <Icon className={`w-8 h-8 ${colorIndex === 1 ? "text-black" : "text-yellow-400"}`} />
-                  </div>
-
-                  <h3 className={`text-2xl font-bold uppercase mb-2 ${textColors[colorIndex]}`}>
-                    {feature.title}
-                  </h3>
-
-                  <div className={`text-xs font-bold uppercase tracking-wider mb-4 ${subtitleColors[colorIndex]}`}>
-                    {feature.subtitle}
-                  </div>
-
-                  <p className={`mb-6 ${colorIndex === 1 ? "text-white" : "text-gray-700"}`}>
-                    {feature.description}
-                  </p>
-
-                  <ul className="space-y-2">
-                    {feature.features.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <RiCheckDoubleLine className={`w-5 h-5 flex-shrink-0 ${colorIndex === 1 ? "text-yellow-400" : "text-black"}`} />
-                        <span className={`text-sm ${colorIndex === 1 ? "text-white" : "text-gray-700"}`}>
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-minimal-lg transition-shadow"
+              >
+                <div className="text-primary mb-4">
+                  {feature.icon}
                 </div>
-              )
-            })}
+                <h3 className="text-2xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {feature.description}
+                </p>
+                <ul className="space-y-2">
+                  {feature.highlights.map((highlight, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
 
-      {/* Model Comparison CTA */}
-      <section className="py-24 bg-yellow-400 border-y-8 border-black">
+      {/* Technology Stack */}
+      <section className="py-24 bg-gray-50">
+        <Container maxWidth="xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-display font-bold mb-4">
+              Powered by Industry-Leading AI
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              We use multiple AI models: MiniMax Video-01 (cinematic video), OpenAI GPT-4 (scene generation), and Vercel infrastructure (global delivery).
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center">
+                <RiVideoLine className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">MiniMax Video-01</h3>
+              <p className="text-gray-600">State-of-the-art text-to-video generation</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-gradient-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
+                <RiSparklingLine className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">OpenAI GPT-4</h3>
+              <p className="text-gray-600">Intelligent scene extraction & generation</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-gradient-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+                <RiGlobalLine className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Vercel Edge</h3>
+              <p className="text-gray-600">Global CDN for lightning-fast delivery</p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-gradient-primary text-white">
         <Container maxWidth="xl">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-black border-4 border-black mb-8">
-              <RiSoundModuleLine className="w-6 h-6 text-yellow-400" />
-              <span className="text-sm font-bold uppercase tracking-wider text-yellow-400">Multiple Models</span>
-            </div>
-            <h2 className="text-5xl font-bold uppercase mb-6 text-black">
-              CHOOSE THE RIGHT MODEL FOR YOUR NEEDS
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+              Ready to Create Your First Trailer?
             </h2>
-            <p className="text-xl text-gray-900 mb-8">
-              We support multiple voice models: Kokoro-82M (simplest, most popular), Minimax 2.6 Turbo (advanced features), and XTTS-v2 (multilingual cloning).
+            <p className="text-xl mb-8 opacity-90">
+              Join thousands of authors bringing their stories to life with AI-powered video
             </p>
-            <Button
-              size="xl"
-              className="gap-3 bg-black text-yellow-400 border-4 border-black font-bold uppercase brutalist-shadow"
-            >
-              <RiArrowRightLine className="w-5 h-5" />
-              Compare Models
-            </Button>
-          </div>
-        </Container>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-24 bg-black border-t-8 border-yellow-400">
-        <Container maxWidth="xl">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-6xl font-bold uppercase mb-6 text-yellow-400">
-              READY TO GET STARTED?
-            </h2>
-            <p className="text-xl text-white mb-12">
-              Join thousands of creators and businesses using VoiceCraft. Start your free trial today—no credit card required.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="xl"
-                className="gap-3 bg-yellow-400 text-black border-4 border-yellow-400 font-bold uppercase"
+            <div className="flex gap-4 justify-center flex-wrap">
+              <a
+                href="/studio"
+                className="px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:shadow-lg transition-all"
               >
-                <RiArrowRightLine className="w-5 h-5" />
-                Start Free Trial
-              </Button>
-              <Button
-                size="xl"
-                variant="outline"
-                className="gap-3 bg-white text-black border-4 border-white font-bold uppercase"
+                Start Creating Free
+              </a>
+              <a
+                href="/pricing"
+                className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary transition-all"
               >
                 View Pricing
-              </Button>
+              </a>
             </div>
           </div>
         </Container>
       </section>
-
-      <Footer />
     </main>
   )
 }

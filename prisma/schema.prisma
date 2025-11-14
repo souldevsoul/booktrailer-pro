@@ -108,10 +108,37 @@ model Book {
 
   // Relations
   trailers    BookTrailer[]
+  scenes      Scene[]
 
   @@index([userId])
   @@index([genre])
   @@map("books")
+}
+
+// Scene model - key scenes/quotes from book for trailer
+model Scene {
+  id          String   @id @default(cuid())
+  bookId      String
+  book        Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+
+  // Scene details
+  order       Int      // Order in trailer sequence
+  title       String?  // Optional scene title
+  sceneText   String   @db.Text // Key scene description or quote
+  visualPrompt String  @db.Text // AI-generated visual prompt for video generation
+
+  // Timing
+  duration    Int      @default(6) // Duration in seconds
+
+  // Style and mood
+  mood        String?  // mysterious, dramatic, uplifting, tense, etc.
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([bookId])
+  @@index([order])
+  @@map("scenes")
 }
 
 // BookTrailer model - AI-generated book trailers

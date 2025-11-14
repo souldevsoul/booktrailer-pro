@@ -16,8 +16,7 @@ const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
     return (
       <Card
         ref={ref}
-        variant="primary"
-       
+        variant="default"
         hover={hover ? "lift" : "none"}
         className={cn("h-full", className)}
         {...props}

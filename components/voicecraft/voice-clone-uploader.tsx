@@ -146,8 +146,7 @@ const VoiceCloneUploader = React.forwardRef<HTMLDivElement, VoiceCloneUploaderPr
 
         {/* Guidelines */}
         <Card
-          variant="primary"
-         
+          variant="default"
           className="border-2 border-blue-200 bg-blue-50"
         >
           <Stack gap="xs">

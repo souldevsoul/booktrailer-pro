@@ -1,317 +1,251 @@
 "use client"
 
-import { Container } from "@/components/ui/container"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Header } from "@/components/marketing/layout/header"
 import { Footer } from "@/components/marketing/layout/footer"
 import {
   RiSparklingLine,
   RiCheckLine,
   RiCloseLine,
   RiArrowRightLine,
-  RiQuestionLine,
-  RiShieldCheckLine,
-  RiFlashlightLine,
-  RiMicLine,
-  RiGlobalLine,
+  RiFilmLine,
+  RiMagicLine,
+  RiVideoLine,
 } from "react-icons/ri"
 
 export default function PricingPage() {
-  const pricingTiers = [
+  const pricingPlans = [
     {
-      name: "Starter",
+      name: "Author",
       price: "$0",
       period: "forever",
-      description: "Perfect for trying out VoiceCraft and small projects",
+      description: "Perfect for indie authors testing the waters",
       popular: false,
       features: [
-        { text: "5,000 characters/month", included: true },
-        { text: "Kokoro-82M voice model", included: true },
-        { text: "Basic voice presets", included: true },
-        { text: "MP3 audio format", included: true },
-        { text: "48kHz sample rate", included: true },
-        { text: "Email support", included: true },
-        { text: "Voice cloning", included: false },
-        { text: "Advanced models", included: false },
-        { text: "Team collaboration", included: false },
-        { text: "Priority support", included: false },
+        { text: "2 trailers per month", included: true },
+        { text: "720p HD quality", included: true },
+        { text: "10 template styles", included: true },
+        { text: "30-60 second videos", included: true },
+        { text: "MP4 export", included: true },
+        { text: "Watermark included", included: true },
+        { text: "Community support", included: true },
+        { text: "1080p exports", included: false },
+        { text: "Custom branding", included: false },
+        { text: "Priority rendering", included: false },
       ],
       cta: "Start Free",
-      ctaHref: "/signup",
+      ctaHref: "/studio",
     },
     {
-      name: "Pro",
-      price: "$29",
+      name: "Publisher",
+      price: "$49",
       period: "per month",
-      description: "For creators and businesses that need powerful voice synthesis",
+      description: "For professionals and publishing houses",
       popular: true,
       features: [
-        { text: "100,000 characters/month", included: true },
-        { text: "All voice models (Kokoro, Minimax, XTTS)", included: true },
-        { text: "5 custom voice clones", included: true },
-        { text: "Emotion control (8 emotions)", included: true },
-        { text: "Speed, pitch, volume control", included: true },
-        { text: "MP3, WAV, FLAC formats", included: true },
-        { text: "50+ languages", included: true },
-        { text: "API access", included: true },
-        { text: "Priority email support", included: true },
-        { text: "Usage analytics", included: true },
+        { text: "20 trailers per month", included: true },
+        { text: "1080p Full HD quality", included: true },
+        { text: "50+ template styles", included: true },
+        { text: "30-120 second videos", included: true },
+        { text: "All export formats", included: true },
+        { text: "No watermark", included: true },
+        { text: "Custom branding", included: true },
+        { text: "Priority rendering queue", included: true },
+        { text: "Multi-platform exports", included: true },
+        { text: "Email support", included: true },
       ],
       cta: "Start Free Trial",
-      ctaHref: "/signup?plan=pro",
+      ctaHref: "/studio",
     },
     {
-      name: "Enterprise",
+      name: "Studio",
       price: "Custom",
       period: "contact us",
-      description: "Advanced features, unlimited usage, and dedicated support",
+      description: "For agencies and large publishers",
       popular: false,
       features: [
-        { text: "Unlimited characters", included: true },
-        { text: "All voice models + beta access", included: true },
-        { text: "Unlimited voice clones", included: true },
-        { text: "Custom voice model training", included: true },
-        { text: "Dedicated infrastructure", included: true },
-        { text: "SLA guarantee (99.9% uptime)", included: true },
-        { text: "Team collaboration (unlimited)", included: true },
-        { text: "SSO integration", included: true },
-        { text: "Priority 24/7 support", included: true },
+        { text: "Unlimited trailers", included: true },
+        { text: "4K quality", included: true },
+        { text: "All templates + custom", included: true },
+        { text: "Unlimited video length", included: true },
+        { text: "White-label solution", included: true },
+        { text: "Dedicated account manager", included: true },
         { text: "Custom integrations", included: true },
+        { text: "API access", included: true },
+        { text: "SLA guarantee (99.9%)", included: true },
+        { text: "Priority 24/7 support", included: true },
       ],
       cta: "Contact Sales",
       ctaHref: "/contact",
     },
   ]
 
-  const comparisonFeatures = [
-    {
-      category: "USAGE LIMITS",
-      features: [
-        { name: "Characters per month", starter: "5,000", pro: "100,000", enterprise: "Unlimited" },
-        { name: "Voice clones", starter: "0", pro: "5", enterprise: "Unlimited" },
-        { name: "API requests/min", starter: "10", pro: "60", enterprise: "Custom" },
-        { name: "Concurrent generations", starter: "1", pro: "3", enterprise: "Unlimited" },
-      ],
-    },
-    {
-      category: "VOICE MODELS",
-      features: [
-        { name: "Kokoro-82M (56M+ runs)", starter: true, pro: true, enterprise: true },
-        { name: "Minimax 2.6 Turbo", starter: false, pro: true, enterprise: true },
-        { name: "Minimax 2.6 HD", starter: false, pro: true, enterprise: true },
-        { name: "XTTS-v2 Multilingual", starter: false, pro: true, enterprise: true },
-        { name: "Beta model access", starter: false, pro: false, enterprise: true },
-        { name: "Custom model training", starter: false, pro: false, enterprise: true },
-      ],
-    },
-    {
-      category: "FEATURES",
-      features: [
-        { name: "Basic voice presets", starter: true, pro: true, enterprise: true },
-        { name: "Voice cloning (Minimax)", starter: false, pro: true, enterprise: true },
-        { name: "Emotion control (8 emotions)", starter: false, pro: true, enterprise: true },
-        { name: "Speed & pitch adjustment", starter: true, pro: true, enterprise: true },
-        { name: "Volume control", starter: true, pro: true, enterprise: true },
-        { name: "50+ languages", starter: false, pro: true, enterprise: true },
-        { name: "Audio formats (MP3, WAV, FLAC)", starter: "MP3", pro: true, enterprise: true },
-        { name: "Subtitle export", starter: false, pro: true, enterprise: true },
-        { name: "Batch processing", starter: false, pro: true, enterprise: true },
-      ],
-    },
-    {
-      category: "SUPPORT & SECURITY",
-      features: [
-        { name: "Email support", starter: true, pro: true, enterprise: true },
-        { name: "Priority support", starter: false, pro: true, enterprise: true },
-        { name: "24/7 support", starter: false, pro: false, enterprise: true },
-        { name: "Dedicated account manager", starter: false, pro: false, enterprise: true },
-        { name: "GDPR compliance", starter: true, pro: true, enterprise: true },
-        { name: "SOC 2 Type II", starter: true, pro: true, enterprise: true },
-        { name: "SLA guarantee", starter: false, pro: false, enterprise: "99.9%" },
-        { name: "SSO integration", starter: false, pro: false, enterprise: true },
-      ],
-    },
-  ]
-
   const faqs = [
     {
-      question: "How is usage calculated?",
-      answer: "Usage is calculated based on the number of characters in your input text. For example, 'Hello World' contains 11 characters (including the space). Characters are counted before text processing, so what you type is what you pay for.",
+      question: "How does the trailer generation work?",
+      answer: "Upload your book details, cover, and synopsis. Choose a cinematic style (dramatic, epic, intimate, suspenseful, or whimsical). Our AI generates a professional video trailer in 2-5 minutes using advanced video generation models.",
     },
     {
-      question: "What happens if I exceed my character limit?",
-      answer: "On the Starter plan, generation will be paused until the next month. On Pro, you can purchase additional character packs for $10 per 50,000 characters. Enterprise plans have unlimited characters.",
+      question: "What video formats can I export?",
+      answer: "Author plan exports MP4 (720p). Publisher and Studio plans support multiple formats and resolutions including 1080p, 4K, and platform-specific exports for YouTube, Instagram, TikTok, and Facebook.",
+    },
+    {
+      question: "Can I use my own music?",
+      answer: "Publisher and Studio plans allow custom music uploads. Author plan can choose from our library of licensed tracks. All music is copyright-safe for commercial use.",
+    },
+    {
+      question: "How many trailer styles are available?",
+      answer: "Author plan includes 10 popular styles. Publisher plan includes 50+ styles covering all genres (thriller, romance, sci-fi, fantasy, mystery, literary, horror, historical). Studio plan includes custom style creation.",
+    },
+    {
+      question: "What's included in the free trial?",
+      answer: "The Publisher plan includes a 14-day free trial with full access to all features (20 trailers, 1080p, no watermark). No credit card required. Cancel anytime during the trial.",
     },
     {
       question: "Can I cancel anytime?",
-      answer: "Yes! All plans can be canceled at any time. If you cancel, you'll retain access until the end of your current billing period, and you won't be charged again.",
+      answer: "Yes! All plans can be canceled at any time. You'll retain access until the end of your billing period. No questions asked, no cancellation fees.",
     },
     {
-      question: "What's the difference between the voice models?",
-      answer: "Kokoro-82M is the simplest and most popular (56M+ runs), great for most use cases. Minimax 2.6 Turbo offers advanced features like emotion control and 50+ languages. XTTS-v2 specializes in multilingual voice cloning. Pro plan includes all models.",
+      question: "What's the AI model used for generation?",
+      answer: "We use Replicate's Luma Ray model for cinematic video generation. It specializes in creating high-quality, narrative-driven video content perfect for book trailers.",
     },
     {
-      question: "How does voice cloning work?",
-      answer: "Upload 10 seconds to 5 minutes of clear audio of the voice you want to clone. Our Minimax-powered technology will create a custom voice profile (voice_id) that you can use with all our synthesis models. The more audio you provide, the better the quality.",
+      question: "How long does generation take?",
+      answer: "Most trailers generate in 2-5 minutes. Publisher plan users get priority queue access for faster processing. Studio plan includes dedicated rendering infrastructure.",
     },
     {
-      question: "What audio formats are supported?",
-      answer: "Starter plan supports MP3. Pro and Enterprise support MP3, WAV, FLAC, and PCM. All formats can be exported at up to 48kHz sample rate for studio-quality audio.",
+      question: "Can I edit the trailer after generation?",
+      answer: "Currently, you can regenerate with different styles or settings. Advanced editing features are coming soon. Studio plan clients can request custom edits.",
     },
     {
-      question: "Is there a free trial for Pro?",
-      answer: "Yes! All new Pro subscribers get a 14-day free trial. No credit card required to start. Cancel anytime during the trial and you won't be charged.",
-    },
-    {
-      question: "What languages are supported?",
-      answer: "Kokoro-82M supports multiple languages. Minimax models support 50+ languages including English, Spanish, French, German, Chinese, Japanese, and more. XTTS-v2 supports 17 languages with voice cloning capabilities.",
-    },
-    {
-      question: "Do you offer discounts for non-profits or education?",
-      answer: "Yes! We offer 50% discounts for qualified non-profit organizations and educational institutions. Contact us at sales@voicecraft.ai with your organization details.",
-    },
-    {
-      question: "How secure is my data?",
-      answer: "All voice data is encrypted end-to-end (AES-256). We're GDPR compliant and SOC 2 Type II certified. Your audio files and voice clones are never shared with third parties. Enterprise plans can opt for zero data retention.",
+      question: "Do you offer discounts for publishers?",
+      answer: "Yes! We offer volume discounts for publishers with 10+ authors. Contact our sales team for custom pricing and white-label solutions.",
     },
   ]
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Header */}
-      <Header
-        logoText="VoiceCraft"
-        navLinks={[
-          { label: "Features", href: "/features" },
-          { label: "Pricing", href: "/pricing" },
-          { label: "Demo", href: "/demo" },
-        ]}
-        ctaButton={{
-          text: "Get Started",
-          href: "/signup",
-        }}
-      />
-
       {/* Hero Section */}
-      <section className="py-20 border-b-8 border-black">
-        <Container maxWidth="xl">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-50/30">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-yellow-400 border-4 border-black mb-8">
-              <RiSparklingLine className="w-6 h-6" />
-              <span className="text-sm font-bold uppercase tracking-wider">Pricing</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-primary text-white rounded-full mb-8 shadow-cinema-lg">
+              <RiSparklingLine className="w-5 h-5" />
+              <span className="text-sm font-semibold uppercase tracking-wider">Pricing</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold uppercase mb-6 leading-tight">
-              SIMPLE, TRANSPARENT PRICING
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
+              Simple, Transparent Pricing
             </h1>
-            <p className="text-xl text-gray-700 mb-8">
-              Start free, scale as you grow. No hidden fees, no surprises. Cancel anytime.
+            <p className="text-xl text-slate-600 mb-8">
+              Start free, scale as you grow. All plans include AI-powered video generation.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center gap-2">
-                <RiShieldCheckLine className="w-5 h-5 text-black" />
-                <span className="font-bold uppercase">14-day free trial</span>
+                <RiCheckLine className="w-5 h-5 text-indigo-600" />
+                <span className="font-medium">14-day free trial</span>
               </div>
               <div className="flex items-center gap-2">
-                <RiFlashlightLine className="w-5 h-5 text-black" />
-                <span className="font-bold uppercase">No credit card required</span>
+                <RiCheckLine className="w-5 h-5 text-indigo-600" />
+                <span className="font-medium">No credit card required</span>
               </div>
               <div className="flex items-center gap-2">
-                <RiCheckLine className="w-5 h-5 text-black" />
-                <span className="font-bold uppercase">Cancel anytime</span>
+                <RiCheckLine className="w-5 h-5 text-indigo-600" />
+                <span className="font-medium">Cancel anytime</span>
               </div>
             </div>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* Pricing Cards */}
       <section className="py-24">
-        <Container maxWidth="xl">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingPlans.map((plan, index) => (
               <div
                 key={index}
-                className={`relative p-8 border-4 border-black ${
-                  tier.popular
-                    ? "bg-black text-white brutalist-shadow-yellow scale-105"
-                    : "bg-white brutalist-shadow"
+                className={`relative p-8 rounded-2xl border-2 ${
+                  plan.popular
+                    ? "bg-gradient-primary text-white border-indigo-400 shadow-cinema-2xl scale-105"
+                    : "bg-white border-slate-200 shadow-cinema-lg"
                 }`}
               >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-yellow-400 border-4 border-black">
-                    <span className="text-sm font-bold uppercase text-black">Most Popular</span>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-cyan-500 text-white rounded-lg shadow-lg">
+                    <span className="text-sm font-semibold uppercase tracking-wider">Most Popular</span>
                   </div>
                 )}
 
                 <div className="mb-6">
                   <h3
-                    className={`text-2xl font-bold uppercase mb-2 ${
-                      tier.popular ? "text-yellow-400" : "text-black"
+                    className={`text-2xl font-display font-bold mb-2 ${
+                      plan.popular ? "text-white" : "text-slate-900"
                     }`}
                   >
-                    {tier.name}
+                    {plan.name}
                   </h3>
                   <div className="flex items-baseline gap-2 mb-2">
                     <span
-                      className={`text-5xl font-bold ${
-                        tier.popular ? "text-yellow-400" : "text-black"
+                      className={`text-5xl font-display font-bold ${
+                        plan.popular ? "text-white" : "text-slate-900"
                       }`}
                     >
-                      {tier.price}
+                      {plan.price}
                     </span>
-                    <span
-                      className={`text-sm font-bold uppercase ${
-                        tier.popular ? "text-white" : "text-gray-600"
-                      }`}
-                    >
-                      {tier.period}
-                    </span>
+                    {plan.price !== "Custom" && (
+                      <span
+                        className={`text-lg font-medium ${
+                          plan.popular ? "text-white/80" : "text-slate-600"
+                        }`}
+                      >
+                        /{plan.period}
+                      </span>
+                    )}
                   </div>
-                  <p className={`text-sm ${tier.popular ? "text-white" : "text-gray-600"}`}>
-                    {tier.description}
+                  <p className={`text-sm ${plan.popular ? "text-white/90" : "text-slate-600"}`}>
+                    {plan.description}
                   </p>
                 </div>
 
-                <Button
-                  size="lg"
-                  className={`w-full mb-8 border-4 font-bold uppercase ${
-                    tier.popular
-                      ? "bg-yellow-400 text-black border-yellow-400 hover:bg-yellow-300"
-                      : "bg-black text-yellow-400 border-black hover:bg-gray-900"
-                  }`}
-                  asChild
-                >
-                  <a href={tier.ctaHref}>
-                    {tier.cta}
+                <Link href={plan.ctaHref}>
+                  <Button
+                    size="lg"
+                    className={`w-full mb-8 font-semibold ${
+                      plan.popular
+                        ? "bg-white text-indigo-600 hover:bg-slate-50"
+                        : "bg-indigo-600 text-white hover:bg-indigo-700"
+                    }`}
+                  >
+                    {plan.cta}
                     <RiArrowRightLine className="w-5 h-5 ml-2" />
-                  </a>
-                </Button>
+                  </Button>
+                </Link>
 
                 <ul className="space-y-3">
-                  {tier.features.map((feature, i) => (
+                  {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
                       {feature.included ? (
                         <RiCheckLine
                           className={`w-5 h-5 flex-shrink-0 ${
-                            tier.popular ? "text-yellow-400" : "text-black"
+                            plan.popular ? "text-white" : "text-indigo-600"
                           }`}
                         />
                       ) : (
                         <RiCloseLine
                           className={`w-5 h-5 flex-shrink-0 ${
-                            tier.popular ? "text-gray-500" : "text-gray-400"
+                            plan.popular ? "text-white/40" : "text-slate-400"
                           }`}
                         />
                       )}
                       <span
                         className={`text-sm ${
                           feature.included
-                            ? tier.popular
+                            ? plan.popular
                               ? "text-white"
-                              : "text-gray-900"
-                            : tier.popular
-                            ? "text-gray-500 line-through"
-                            : "text-gray-400 line-through"
+                              : "text-slate-900"
+                            : plan.popular
+                            ? "text-white/40 line-through"
+                            : "text-slate-400 line-through"
                         }`}
                       >
                         {feature.text}
@@ -322,242 +256,119 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
-        </Container>
+        </div>
       </section>
 
-      {/* Detailed Comparison Table */}
-      <section className="py-24 bg-gray-50 border-y-8 border-black">
-        <Container maxWidth="xl">
+      {/* Cost Breakdown */}
+      <section className="py-24 bg-gradient-dark text-white">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4">
-              DETAILED FEATURE COMPARISON
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+              Transparent AI Pricing
             </h2>
-            <p className="text-xl text-gray-600">
-              See exactly what's included in each plan
+            <p className="text-slate-300 text-lg">
+              Based on Replicate Luma Ray API costs with our markup
             </p>
           </div>
 
-          {comparisonFeatures.map((category, catIndex) => (
-            <div key={catIndex} className="mb-8 bg-white border-4 border-black brutalist-shadow">
-              <div className="bg-black text-yellow-400 px-6 py-4 border-b-4 border-black">
-                <h3 className="text-xl font-bold uppercase">{category.category}</h3>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+              <div className="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mb-4">
+                <RiFilmLine className="w-6 h-6 text-white" />
               </div>
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b-4 border-black bg-yellow-400">
-                      <th className="text-left p-4 font-bold uppercase text-sm">Feature</th>
-                      <th className="text-center p-4 font-bold uppercase text-sm border-l-4 border-black">
-                        Starter
-                      </th>
-                      <th className="text-center p-4 font-bold uppercase text-sm border-l-4 border-black">
-                        Pro
-                      </th>
-                      <th className="text-center p-4 font-bold uppercase text-sm border-l-4 border-black">
-                        Enterprise
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {category.features.map((feature, featIndex) => (
-                      <tr key={featIndex} className="border-b-2 border-gray-200 last:border-0">
-                        <td className="p-4 font-medium">{feature.name}</td>
-                        <td className="text-center p-4 border-l-4 border-black">
-                          {typeof feature.starter === "boolean" ? (
-                            feature.starter ? (
-                              <RiCheckLine className="w-6 h-6 text-black mx-auto" />
-                            ) : (
-                              <RiCloseLine className="w-6 h-6 text-gray-400 mx-auto" />
-                            )
-                          ) : (
-                            <span className="font-bold">{feature.starter}</span>
-                          )}
-                        </td>
-                        <td className="text-center p-4 border-l-4 border-black bg-yellow-50">
-                          {typeof feature.pro === "boolean" ? (
-                            feature.pro ? (
-                              <RiCheckLine className="w-6 h-6 text-black mx-auto" />
-                            ) : (
-                              <RiCloseLine className="w-6 h-6 text-gray-400 mx-auto" />
-                            )
-                          ) : (
-                            <span className="font-bold">{feature.pro}</span>
-                          )}
-                        </td>
-                        <td className="text-center p-4 border-l-4 border-black">
-                          {typeof feature.enterprise === "boolean" ? (
-                            feature.enterprise ? (
-                              <RiCheckLine className="w-6 h-6 text-black mx-auto" />
-                            ) : (
-                              <RiCloseLine className="w-6 h-6 text-gray-400 mx-auto" />
-                            )
-                          ) : (
-                            <span className="font-bold">{feature.enterprise}</span>
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          ))}
-        </Container>
-      </section>
-
-      {/* Cost Calculator */}
-      <section className="py-24">
-        <Container maxWidth="xl">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4">
-                TRANSPARENT PRICING MODEL
-              </h2>
-              <p className="text-xl text-gray-600">
-                Based on Replicate API costs with our markup
-              </p>
+              <h3 className="text-lg font-bold mb-2">30-Second Trailer</h3>
+              <div className="text-3xl font-display font-bold mb-2 text-cyan-400">~$0.50</div>
+              <p className="text-sm text-slate-300">Perfect for quick promos</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                <div className="w-12 h-12 bg-yellow-400 border-2 border-black flex items-center justify-center mb-4">
-                  <RiMicLine className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold uppercase mb-2">KOKORO-82M</h3>
-                <div className="text-3xl font-bold mb-2">$0.05</div>
-                <p className="text-sm text-gray-600 mb-4">per 1,000 characters</p>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Most economical</li>
-                  <li>• 56M+ production runs</li>
-                  <li>• Best for volume</li>
-                </ul>
+            <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+              <div className="w-12 h-12 bg-violet-500 rounded-lg flex items-center justify-center mb-4">
+                <RiMagicLine className="w-6 h-6 text-white" />
               </div>
-
-              <div className="p-6 bg-black text-white border-4 border-black brutalist-shadow-yellow">
-                <div className="w-12 h-12 bg-yellow-400 border-2 border-black flex items-center justify-center mb-4">
-                  <RiFlashlightLine className="w-6 h-6 text-black" />
-                </div>
-                <h3 className="text-lg font-bold uppercase mb-2 text-yellow-400">
-                  MINIMAX 2.6 TURBO
-                </h3>
-                <div className="text-3xl font-bold mb-2 text-yellow-400">$0.10</div>
-                <p className="text-sm text-gray-300 mb-4">per 1,000 characters</p>
-                <ul className="text-sm text-gray-300 space-y-1">
-                  <li>• Real-time optimized</li>
-                  <li>• Emotion control</li>
-                  <li>• 50+ languages</li>
-                </ul>
-              </div>
-
-              <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                <div className="w-12 h-12 bg-yellow-400 border-2 border-black flex items-center justify-center mb-4">
-                  <RiGlobalLine className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold uppercase mb-2">VOICE CLONING</h3>
-                <div className="text-3xl font-bold mb-2">$0.20</div>
-                <p className="text-sm text-gray-600 mb-4">per clone training</p>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• One-time cost</li>
-                  <li>• Use unlimited times</li>
-                  <li>• 10s-5min audio</li>
-                </ul>
-              </div>
+              <h3 className="text-lg font-bold mb-2">60-Second Trailer</h3>
+              <div className="text-3xl font-display font-bold mb-2 text-cyan-400">~$1.00</div>
+              <p className="text-sm text-slate-300">Standard book trailer</p>
             </div>
 
-            <div className="p-8 bg-yellow-400 border-4 border-black brutalist-shadow">
-              <h3 className="text-2xl font-bold uppercase mb-4">EXAMPLE MONTHLY COSTS</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center pb-4 border-b-4 border-black">
-                  <span className="font-bold">Small Blog (10K chars/month)</span>
-                  <span className="text-2xl font-bold">$0.50 - $1.00</span>
-                </div>
-                <div className="flex justify-between items-center pb-4 border-b-4 border-black">
-                  <span className="font-bold">Medium Podcast (100K chars/month)</span>
-                  <span className="text-2xl font-bold">$5.00 - $10.00</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="font-bold">Large Business (1M chars/month)</span>
-                  <span className="text-2xl font-bold">$50.00 - $100.00</span>
-                </div>
+            <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+              <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                <RiVideoLine className="w-6 h-6 text-white" />
               </div>
-              <p className="text-sm mt-6 font-medium">
-                * API costs only. Pro plan ($29/mo) includes 100K characters plus all premium features.
-              </p>
+              <h3 className="text-lg font-bold mb-2">120-Second Trailer</h3>
+              <div className="text-3xl font-display font-bold mb-2 text-cyan-400">~$2.00</div>
+              <p className="text-sm text-slate-300">Extended narrative</p>
             </div>
           </div>
-        </Container>
+
+          <div className="mt-12 max-w-3xl mx-auto p-6 bg-cyan-500/20 backdrop-blur-sm rounded-xl border border-cyan-400/30">
+            <p className="text-center text-white/90">
+              <strong className="text-cyan-400">Publisher Plan ($49/mo)</strong> includes 20 trailers
+              (worth ~$40 in API costs) plus 1080p exports, no watermark, custom branding, and priority support.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-black border-y-8 border-yellow-400">
-        <Container maxWidth="xl">
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-yellow-400 border-4 border-yellow-400 mb-8">
-              <RiQuestionLine className="w-6 h-6" />
-              <span className="text-sm font-bold uppercase tracking-wider">FAQ</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-indigo-100 rounded-full mb-6">
+              <RiSparklingLine className="w-5 h-5 text-indigo-600" />
+              <span className="text-sm font-semibold text-indigo-900 uppercase tracking-wider">FAQ</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4 text-yellow-400">
-              FREQUENTLY ASKED QUESTIONS
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+              Frequently Asked Questions
             </h2>
-            <p className="text-xl text-white">
-              Everything you need to know about pricing and plans
+            <p className="text-xl text-slate-600">
+              Everything you need to know about BookTrailer Pro
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto grid gap-6">
+          <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="p-6 bg-white border-4 border-white brutalist-shadow-yellow"
+                className="p-6 bg-white border border-slate-200 rounded-xl shadow-cinema-md hover-lift"
               >
-                <h3 className="text-lg font-bold uppercase mb-3">{faq.question}</h3>
-                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                <h3 className="text-lg font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-24">
-        <Container maxWidth="xl">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-6xl font-bold uppercase mb-6">
-              READY TO GET STARTED?
-            </h2>
-            <p className="text-xl text-gray-700 mb-12">
-              Start with our free Starter plan. Upgrade anytime as you grow. No credit card required.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
+      <section className="py-24 bg-gradient-cinema text-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-5xl md:text-6xl font-display font-bold mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-white/90 mb-12">
+            Start with our free Author plan. Upgrade anytime as your needs grow.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/studio">
               <Button
                 size="xl"
-                className="gap-3 bg-yellow-400 text-black border-4 border-black font-bold uppercase brutalist-shadow"
-                asChild
+                className="gap-3 bg-white text-indigo-600 hover:bg-slate-50"
               >
-                <a href="/signup">
-                  <RiArrowRightLine className="w-5 h-5" />
-                  Start Free Trial
-                </a>
+                <RiArrowRightLine className="w-5 h-5" />
+                Create Your First Trailer
               </Button>
-              <Button
-                size="xl"
-                variant="outline"
-                className="gap-3 bg-white text-black border-4 border-black font-bold uppercase brutalist-shadow"
-                asChild
-              >
-                <a href="/demo">Try Demo</a>
-              </Button>
+            </Link>
+            <Link href="/contact">
               <Button
                 size="xl"
                 variant="outline"
-                className="gap-3 bg-black text-yellow-400 border-4 border-black font-bold uppercase brutalist-shadow"
-                asChild
+                className="gap-3 border-2 border-white text-white hover:bg-white/10"
               >
-                <a href="/contact">Contact Sales</a>
+                Contact Sales
               </Button>
-            </div>
+            </Link>
           </div>
-        </Container>
+        </div>
       </section>
 
       <Footer />

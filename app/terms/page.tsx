@@ -1,7 +1,7 @@
 "use client"
 
 import { Container } from "@/components/ui/container"
-import { Header } from "@/components/marketing/layout/header"
+import { Header } from "@/components/marketing/layout"
 import { Footer } from "@/components/marketing/layout/footer"
 import {
   RiFileTextLine,
@@ -13,7 +13,7 @@ import {
 } from "react-icons/ri"
 
 export default function TermsPage() {
-  const lastUpdated = "November 8, 2025"
+  const lastUpdated = "January 14, 2025"
 
   const sections = [
     {
@@ -21,10 +21,10 @@ export default function TermsPage() {
       icon: RiCheckLine,
       content: [
         {
-          text: "By accessing or using VoiceCraft ('Service', 'Platform', 'we', 'us', 'our'), you agree to be bound by these Terms of Service ('Terms'). If you do not agree to these Terms, you may not access or use the Service.",
+          text: "By accessing or using BookTrailer Pro ('Service', 'Platform', 'we', 'us', 'our'), you agree to be bound by these Terms of Service ('Terms'). If you do not agree to these Terms, you may not access or use the Service.",
         },
         {
-          text: "These Terms constitute a legally binding agreement between you (whether personally or on behalf of an entity) and VoiceCraft, Inc. If you are using the Service on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms.",
+          text: "These Terms constitute a legally binding agreement between you (whether personally or on behalf of an entity) and BookTrailer Pro. If you are using the Service on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms.",
         },
         {
           text: "We reserve the right to modify these Terms at any time. We will notify you of material changes via email or through the Service. Your continued use of the Service after such modifications constitutes your acceptance of the updated Terms.",
@@ -37,7 +37,7 @@ export default function TermsPage() {
       content: [
         {
           subtitle: "Account Creation",
-          text: "To use VoiceCraft, you must create an account by providing accurate, complete, and current information. You must be at least 13 years old (or 16 in the EU) to create an account. You are responsible for maintaining the confidentiality of your account credentials.",
+          text: "To use BookTrailer Pro, you must create an account by providing accurate, complete, and current information. You must be at least 13 years old (or 16 in the EU) to create an account. You are responsible for maintaining the confidentiality of your account credentials.",
         },
         {
           subtitle: "Account Security",
@@ -55,15 +55,15 @@ export default function TermsPage() {
       content: [
         {
           subtitle: "License Grant",
-          text: "Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to access and use the Service for your personal or internal business purposes. This license does not include the right to sublicense, resell, or distribute the Service.",
+          text: "Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to access and use the Service for your personal or business purposes. This license does not include the right to sublicense, resell, or distribute the Service.",
         },
         {
           subtitle: "Service Availability",
-          text: "We strive to provide 99.9% uptime for Pro and Enterprise customers. However, the Service may be temporarily unavailable due to maintenance, updates, or circumstances beyond our control. We are not liable for any downtime or service interruptions.",
+          text: "We strive to provide 99.9% uptime for paid customers. However, the Service may be temporarily unavailable due to maintenance, updates, or circumstances beyond our control. We are not liable for any downtime or service interruptions.",
         },
         {
           subtitle: "Usage Limits",
-          text: "Your use of the Service is subject to the limits of your subscription plan (character limits, API rate limits, voice clones). Exceeding these limits may result in additional charges or temporary service restrictions. Enterprise customers can negotiate custom limits.",
+          text: "Your use of the Service is subject to the limits of your subscription plan (trailer generation limits, video duration, storage). Exceeding these limits may result in additional charges or temporary service restrictions. Enterprise customers can negotiate custom limits.",
         },
         {
           subtitle: "API Usage",
@@ -80,19 +80,19 @@ export default function TermsPage() {
         },
         {
           subtitle: "Illegal Activity",
-          text: "Creating voice content for illegal purposes, fraud, scams, or deception; impersonating others without consent; generating content that violates any laws or regulations.",
+          text: "Creating video content for illegal purposes, fraud, scams, or deception; generating content that violates any laws or regulations; infringing on intellectual property rights of others.",
         },
         {
           subtitle: "Harmful Content",
-          text: "Creating content that harasses, threatens, or harms others; generating hate speech, discriminatory, or violent content; creating deepfakes or misleading audio without disclosure; producing content that infringes on others' rights.",
+          text: "Creating content that harasses, threatens, or harms others; generating hate speech, discriminatory, or violent content; producing content that infringes on others' copyright, trademark, or other intellectual property rights.",
         },
         {
           subtitle: "Service Abuse",
           text: "Attempting to reverse engineer, decompile, or hack the Service; circumventing usage limits or payment requirements; reselling or redistributing the Service without authorization; using the Service to compete with us or build a similar product.",
         },
         {
-          subtitle: "Voice Cloning Abuse",
-          text: "Cloning voices without explicit consent from the voice owner; using cloned voices for impersonation, fraud, or deception; violating publicity or privacy rights of individuals.",
+          subtitle: "Content Misuse",
+          text: "Using book content you do not own or have rights to; creating trailers for books without proper licensing; misrepresenting book content or authors; violating publicity or privacy rights of individuals.",
         },
         {
           text: "We reserve the right to investigate suspected violations and take appropriate action, including account suspension or termination, reporting to authorities, and pursuing legal remedies.",
@@ -105,19 +105,19 @@ export default function TermsPage() {
       content: [
         {
           subtitle: "Our IP",
-          text: "VoiceCraft, including all software, algorithms, designs, trademarks, logos, and content, is owned by VoiceCraft, Inc. and protected by copyright, trademark, and other intellectual property laws. You may not copy, modify, distribute, or create derivative works without our written permission.",
+          text: "BookTrailer Pro, including all software, algorithms, designs, trademarks, logos, and content, is owned by BookTrailer Pro and protected by copyright, trademark, and other intellectual property laws. You may not copy, modify, distribute, or create derivative works without our written permission.",
         },
         {
           subtitle: "Your Content",
-          text: "You retain ownership of the text inputs you provide and the audio files you upload for voice cloning. By using the Service, you grant us a limited license to process your content solely to provide the Service. We do not claim ownership of your content.",
+          text: "You retain ownership of the book information, covers, synopsis, and other content you provide. By using the Service, you grant us a limited license to process your content solely to provide the Service. We do not claim ownership of your content.",
         },
         {
-          subtitle: "Generated Content",
-          text: "You own the audio files generated by the Service using your inputs. However, you are responsible for ensuring your use of generated content complies with applicable laws and these Terms. You must not claim that generated content is a real human voice without disclosure.",
+          subtitle: "Generated Trailers",
+          text: "You own the book trailer videos generated by the Service using your inputs. However, you are responsible for ensuring your use of generated trailers complies with applicable laws and these Terms. You must have rights to all book content used in trailer generation.",
         },
         {
           subtitle: "AI Model Providers",
-          text: "The underlying AI models (Kokoro-82M, Minimax, XTTS-v2) are owned by their respective creators and licensed through Replicate. Your use of generated content must comply with the terms of these model providers.",
+          text: "The underlying AI models (MiniMax Video-01, OpenAI GPT-4, and others) are owned by their respective creators. Your use of generated content must comply with the terms of these model providers.",
         },
       ],
     },
@@ -127,15 +127,15 @@ export default function TermsPage() {
       content: [
         {
           subtitle: "Content Ownership",
-          text: "You are solely responsible for the content you create using our Service, including text inputs, voice clones, and generated audio. You represent and warrant that you have all necessary rights, licenses, and permissions to use such content.",
+          text: "You are solely responsible for the content you create using our Service, including book information, synopsis, scenes, and generated trailers. You represent and warrant that you have all necessary rights, licenses, and permissions to use such content.",
         },
         {
           subtitle: "Content Moderation",
           text: "We reserve the right (but have no obligation) to monitor, review, or remove content that violates these Terms or applicable laws. We may use automated and manual moderation techniques. We are not responsible for user-generated content.",
         },
         {
-          subtitle: "Disclosure Requirements",
-          text: "If you publish or distribute AI-generated audio, you agree to clearly disclose that it was created using AI technology. This disclosure must be prominent and not misleading. Failure to disclose may result in account termination.",
+          subtitle: "Copyright Compliance",
+          text: "You must own or have rights to all book content used in trailer generation. You are responsible for obtaining necessary permissions from copyright holders. We will respond to DMCA takedown notices and may terminate accounts of repeat infringers.",
         },
       ],
     },
@@ -145,7 +145,7 @@ export default function TermsPage() {
       content: [
         {
           subtitle: "Subscription Plans",
-          text: "VoiceCraft offers free and paid subscription plans. Paid plans are billed monthly or annually in advance. Prices are listed on our Pricing page and may change with 30 days' notice to existing subscribers.",
+          text: "BookTrailer Pro offers free and paid subscription plans. Paid plans are billed monthly or annually in advance. Prices are listed on our Pricing page and may change with 30 days' notice to existing subscribers.",
         },
         {
           subtitle: "Payment Processing",
@@ -193,7 +193,7 @@ export default function TermsPage() {
           text: 'THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. WE DISCLAIM ALL WARRANTIES, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND TITLE.',
         },
         {
-          text: "We do not warrant that the Service will be uninterrupted, error-free, or secure. We do not warrant the accuracy, reliability, or quality of generated audio. We are not responsible for any damage caused by your use of the Service.",
+          text: "We do not warrant that the Service will be uninterrupted, error-free, or secure. We do not warrant the accuracy, reliability, or quality of generated video trailers. We are not responsible for any damage caused by your use of the Service.",
         },
         {
           text: "AI-generated content may contain errors, biases, or inaccuracies. You are solely responsible for verifying and validating all generated content before use. We make no representations about the suitability of generated content for any purpose.",
@@ -204,7 +204,7 @@ export default function TermsPage() {
       title: "10. Limitation of Liability",
       content: [
         {
-          text: "TO THE MAXIMUM EXTENT PERMITTED BY LAW, VOICECRAFT SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR USE, WHETHER IN CONTRACT, TORT, OR OTHERWISE, ARISING FROM YOUR USE OF THE SERVICE.",
+          text: "TO THE MAXIMUM EXTENT PERMITTED BY LAW, BOOKTRAILER PRO SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR USE, WHETHER IN CONTRACT, TORT, OR OTHERWISE, ARISING FROM YOUR USE OF THE SERVICE.",
         },
         {
           text: "OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATED TO THE SERVICE SHALL NOT EXCEED THE AMOUNT YOU PAID US IN THE 12 MONTHS PRECEDING THE CLAIM, OR $100 IF YOU HAVE NOT PAID US ANYTHING.",
@@ -218,10 +218,10 @@ export default function TermsPage() {
       title: "11. Indemnification",
       content: [
         {
-          text: "You agree to indemnify, defend, and hold harmless VoiceCraft, its affiliates, officers, directors, employees, and agents from any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising from:",
+          text: "You agree to indemnify, defend, and hold harmless BookTrailer Pro, its affiliates, officers, directors, employees, and agents from any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising from:",
         },
         {
-          text: "Your use of the Service; your content or generated audio; your violation of these Terms; your violation of any rights of third parties; your violation of applicable laws or regulations.",
+          text: "Your use of the Service; your content or generated trailers; your violation of these Terms; your violation of any rights of third parties including copyright infringement; your violation of applicable laws or regulations.",
         },
         {
           text: "This indemnification obligation survives termination of these Terms and your use of the Service.",
@@ -241,7 +241,7 @@ export default function TermsPage() {
         },
         {
           subtitle: "Class Action Waiver",
-          text: "You agree that any arbitration or court proceeding shall be limited to the dispute between you and VoiceCraft individually. You waive the right to participate in class actions, class arbitrations, or representative actions.",
+          text: "You agree that any arbitration or court proceeding shall be limited to the dispute between you and BookTrailer Pro individually. You waive the right to participate in class actions, class arbitrations, or representative actions.",
         },
         {
           subtitle: "Exceptions",
@@ -255,33 +255,33 @@ export default function TermsPage() {
     <main className="min-h-screen bg-white">
       {/* Header */}
       <Header
-        logoText="VoiceCraft"
+        logoText="BookTrailer Pro"
         navLinks={[
           { label: "Features", href: "/features" },
           { label: "Pricing", href: "/pricing" },
-          { label: "Demo", href: "/demo" },
+          { label: "Studio", href: "/studio" },
         ]}
         ctaButton={{
-          text: "Get Started",
-          href: "/signup",
+          text: "Create Trailer",
+          href: "/studio",
         }}
       />
 
       {/* Hero Section */}
-      <section className="py-20 border-b-8 border-black">
+      <section className="py-20 border-b border-gray-200">
         <Container maxWidth="xl">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-yellow-400 border-4 border-black mb-8">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-primary text-white rounded-full mb-8">
               <RiFileTextLine className="w-6 h-6" />
-              <span className="text-sm font-bold uppercase tracking-wider">Terms of Service</span>
+              <span className="text-sm font-semibold uppercase tracking-wider">Terms of Service</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold uppercase mb-6 leading-tight">
-              TERMS & CONDITIONS
+            <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 leading-tight">
+              Terms & Conditions
             </h1>
-            <p className="text-xl text-gray-700 mb-6">
-              These Terms of Service govern your use of VoiceCraft. Please read them carefully before using our platform.
+            <p className="text-xl text-gray-600 mb-6">
+              These Terms of Service govern your use of BookTrailer Pro. Please read them carefully before using our platform.
             </p>
-            <p className="text-sm font-bold uppercase text-gray-900">
+            <p className="text-sm font-semibold text-gray-900">
               Last Updated: {lastUpdated}
             </p>
           </div>
@@ -289,46 +289,46 @@ export default function TermsPage() {
       </section>
 
       {/* Quick Summary */}
-      <section className="py-16 bg-black border-b-8 border-yellow-400">
+      <section className="py-16 bg-gray-50">
         <Container maxWidth="xl">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold uppercase mb-8 text-yellow-400">
-              THE KEY POINTS
+            <h2 className="text-3xl font-display font-bold mb-8">
+              The Key Points
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="p-6 bg-white border-4 border-white">
+              <div className="p-6 bg-white rounded-lg shadow-minimal-md border border-gray-200">
                 <div className="flex items-center gap-3 mb-3">
-                  <RiCheckLine className="w-6 h-6 flex-shrink-0" />
-                  <h3 className="text-lg font-bold uppercase">YOUR RIGHTS</h3>
+                  <RiCheckLine className="w-6 h-6 flex-shrink-0 text-primary" />
+                  <h3 className="text-lg font-semibold">Your Rights</h3>
                 </div>
-                <p className="text-gray-700 text-sm">
-                  You own your content and generated audio. Use the Service according to your plan limits. Cancel anytime.
+                <p className="text-gray-600 text-sm">
+                  You own your content and generated trailers. Use the Service according to your plan limits. Cancel anytime.
                 </p>
               </div>
-              <div className="p-6 bg-white border-4 border-white">
+              <div className="p-6 bg-white rounded-lg shadow-minimal-md border border-gray-200">
                 <div className="flex items-center gap-3 mb-3">
-                  <RiCloseLine className="w-6 h-6 flex-shrink-0" />
-                  <h3 className="text-lg font-bold uppercase">PROHIBITED</h3>
+                  <RiCloseLine className="w-6 h-6 flex-shrink-0 text-accent" />
+                  <h3 className="text-lg font-semibold">Prohibited</h3>
                 </div>
-                <p className="text-gray-700 text-sm">
-                  No illegal activity, impersonation, harassment, or service abuse. Voice cloning requires consent.
+                <p className="text-gray-600 text-sm">
+                  No illegal activity, copyright infringement, harassment, or service abuse. You must own rights to book content.
                 </p>
               </div>
-              <div className="p-6 bg-white border-4 border-white">
+              <div className="p-6 bg-white rounded-lg shadow-minimal-md border border-gray-200">
                 <div className="flex items-center gap-3 mb-3">
-                  <RiScalesLine className="w-6 h-6 flex-shrink-0" />
-                  <h3 className="text-lg font-bold uppercase">LIABILITY</h3>
+                  <RiScalesLine className="w-6 h-6 flex-shrink-0 text-secondary" />
+                  <h3 className="text-lg font-semibold">Liability</h3>
                 </div>
-                <p className="text-gray-700 text-sm">
+                <p className="text-gray-600 text-sm">
                   Service provided "as is." Our liability is limited. You're responsible for your use of generated content.
                 </p>
               </div>
-              <div className="p-6 bg-white border-4 border-white">
+              <div className="p-6 bg-white rounded-lg shadow-minimal-md border border-gray-200">
                 <div className="flex items-center gap-3 mb-3">
-                  <RiShieldLine className="w-6 h-6 flex-shrink-0" />
-                  <h3 className="text-lg font-bold uppercase">PAYMENT</h3>
+                  <RiShieldLine className="w-6 h-6 flex-shrink-0 text-primary" />
+                  <h3 className="text-lg font-semibold">Payment</h3>
                 </div>
-                <p className="text-gray-700 text-sm">
+                <p className="text-gray-600 text-sm">
                   Subscriptions billed in advance. Non-refundable except as required by law. Cancel anytime.
                 </p>
               </div>
@@ -347,10 +347,10 @@ export default function TermsPage() {
                 <div key={sectionIndex} id={`section-${sectionIndex + 1}`}>
                   <div className="mb-8">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-yellow-400" />
+                      <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
+                        <Icon className="w-6 h-6 text-white" />
                       </div>
-                      <h2 className="text-3xl font-bold uppercase">{section.title}</h2>
+                      <h2 className="text-3xl font-display font-bold">{section.title}</h2>
                     </div>
                   </div>
 
@@ -358,12 +358,10 @@ export default function TermsPage() {
                     {section.content.map((item, itemIndex) => (
                       <div
                         key={itemIndex}
-                        className={`p-6 border-4 border-black ${
-                          itemIndex % 2 === 0 ? "bg-white brutalist-shadow" : "bg-yellow-50"
-                        }`}
+                        className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-minimal-md transition-shadow"
                       >
                         {('subtitle' in item) && item.subtitle && (
-                          <h3 className="text-lg font-bold uppercase mb-3">{item.subtitle}</h3>
+                          <h3 className="text-lg font-semibold mb-3">{item.subtitle}</h3>
                         )}
                         <p className="text-gray-700 leading-relaxed">{item.text}</p>
                       </div>
@@ -378,10 +376,10 @@ export default function TermsPage() {
               <div key={sectionIndex + 8} id={`section-${sectionIndex + 9}`}>
                 <div className="mb-8">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
-                      <RiScalesLine className="w-6 h-6 text-yellow-400" />
+                    <div className="w-12 h-12 bg-gradient-secondary rounded-lg flex items-center justify-center">
+                      <RiScalesLine className="w-6 h-6 text-white" />
                     </div>
-                    <h2 className="text-3xl font-bold uppercase">{section.title}</h2>
+                    <h2 className="text-3xl font-display font-bold">{section.title}</h2>
                   </div>
                 </div>
 
@@ -389,10 +387,10 @@ export default function TermsPage() {
                   {section.content.map((item, itemIndex) => (
                     <div
                       key={itemIndex}
-                      className="p-6 bg-yellow-50 border-4 border-black"
+                      className="p-6 bg-gray-50 rounded-lg border border-gray-200"
                     >
                       {('subtitle' in item) && item.subtitle && (
-                        <h3 className="text-lg font-bold uppercase mb-3">{item.subtitle}</h3>
+                        <h3 className="text-lg font-semibold mb-3">{item.subtitle}</h3>
                       )}
                       <p className="text-gray-700 leading-relaxed font-medium">{item.text}</p>
                     </div>
@@ -405,44 +403,44 @@ export default function TermsPage() {
             <div id="section-13">
               <div className="mb-8">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-black border-4 border-black flex items-center justify-center">
-                    <RiFileTextLine className="w-6 h-6 text-yellow-400" />
+                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center">
+                    <RiFileTextLine className="w-6 h-6 text-white" />
                   </div>
-                  <h2 className="text-3xl font-bold uppercase">13. Miscellaneous</h2>
+                  <h2 className="text-3xl font-display font-bold">13. Miscellaneous</h2>
                 </div>
               </div>
 
               <div className="space-y-4">
-                <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                  <h3 className="text-lg font-bold uppercase mb-3">Entire Agreement</h3>
+                <div className="p-6 bg-white rounded-lg border border-gray-200">
+                  <h3 className="text-lg font-semibold mb-3">Entire Agreement</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    These Terms, together with our Privacy Policy and any other agreements referenced herein, constitute the entire agreement between you and VoiceCraft regarding the Service. They supersede all prior agreements and understandings.
+                    These Terms, together with our Privacy Policy and any other agreements referenced herein, constitute the entire agreement between you and BookTrailer Pro regarding the Service. They supersede all prior agreements and understandings.
                   </p>
                 </div>
 
-                <div className="p-6 bg-yellow-50 border-4 border-black">
-                  <h3 className="text-lg font-bold uppercase mb-3">Severability</h3>
+                <div className="p-6 bg-white rounded-lg border border-gray-200">
+                  <h3 className="text-lg font-semibold mb-3">Severability</h3>
                   <p className="text-gray-700 leading-relaxed">
                     If any provision of these Terms is found to be invalid or unenforceable, that provision shall be enforced to the maximum extent possible, and the remaining provisions shall remain in full force and effect.
                   </p>
                 </div>
 
-                <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                  <h3 className="text-lg font-bold uppercase mb-3">Waiver</h3>
+                <div className="p-6 bg-white rounded-lg border border-gray-200">
+                  <h3 className="text-lg font-semibold mb-3">Waiver</h3>
                   <p className="text-gray-700 leading-relaxed">
                     No waiver of any term or provision of these Terms shall be deemed a further or continuing waiver of such term or any other term. Our failure to assert any right or provision under these Terms shall not constitute a waiver of such right or provision.
                   </p>
                 </div>
 
-                <div className="p-6 bg-yellow-50 border-4 border-black">
-                  <h3 className="text-lg font-bold uppercase mb-3">Assignment</h3>
+                <div className="p-6 bg-white rounded-lg border border-gray-200">
+                  <h3 className="text-lg font-semibold mb-3">Assignment</h3>
                   <p className="text-gray-700 leading-relaxed">
                     You may not assign or transfer these Terms or your rights and obligations hereunder without our prior written consent. We may assign these Terms to any affiliate or in connection with a merger, acquisition, or sale of assets.
                   </p>
                 </div>
 
-                <div className="p-6 bg-white border-4 border-black brutalist-shadow">
-                  <h3 className="text-lg font-bold uppercase mb-3">Force Majeure</h3>
+                <div className="p-6 bg-white rounded-lg border border-gray-200">
+                  <h3 className="text-lg font-semibold mb-3">Force Majeure</h3>
                   <p className="text-gray-700 leading-relaxed">
                     We shall not be liable for any failure or delay in performance due to circumstances beyond our reasonable control, including acts of God, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, pandemics, strikes, or shortages of transportation, facilities, fuel, energy, labor, or materials.
                   </p>
@@ -454,49 +452,49 @@ export default function TermsPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-black border-t-8 border-yellow-400">
+      <section className="py-24 bg-gradient-primary text-white">
         <Container maxWidth="xl">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="w-20 h-20 bg-yellow-400 border-4 border-yellow-400 flex items-center justify-center mx-auto mb-6">
-              <RiMailLine className="w-10 h-10 text-black" />
+            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+              <RiMailLine className="w-10 h-10 text-primary" />
             </div>
-            <h2 className="text-4xl font-bold uppercase mb-6 text-yellow-400">
-              QUESTIONS ABOUT THESE TERMS?
+            <h2 className="text-4xl font-display font-bold mb-6">
+              Questions About These Terms?
             </h2>
-            <p className="text-xl text-white mb-8">
+            <p className="text-xl mb-8 opacity-90">
               If you have questions about these Terms of Service, please contact us.
             </p>
 
-            <div className="p-8 bg-white border-4 border-white brutalist-shadow-yellow">
-              <h3 className="text-2xl font-bold uppercase mb-4">CONTACT US</h3>
+            <div className="p-8 bg-white text-gray-900 rounded-lg shadow-minimal-lg">
+              <h3 className="text-2xl font-bold mb-4">Contact Us</h3>
               <div className="space-y-3 text-left max-w-2xl mx-auto">
                 <div>
-                  <span className="font-bold uppercase text-sm">Email:</span>
+                  <span className="font-semibold text-sm">Email:</span>
                   <br />
                   <a
-                    href="mailto:legal@voicecraft.ai"
-                    className="text-lg font-bold text-black underline hover:no-underline"
+                    href="mailto:legal@booktrailer.pro"
+                    className="text-lg font-semibold text-primary underline hover:no-underline"
                   >
-                    legal@voicecraft.ai
+                    legal@booktrailer.pro
                   </a>
                 </div>
                 <div>
-                  <span className="font-bold uppercase text-sm">Support:</span>
+                  <span className="font-semibold text-sm">Support:</span>
                   <br />
                   <a
-                    href="mailto:support@voicecraft.ai"
-                    className="text-lg font-bold text-black underline hover:no-underline"
+                    href="mailto:support@booktrailer.pro"
+                    className="text-lg font-semibold text-primary underline hover:no-underline"
                   >
-                    support@voicecraft.ai
+                    support@booktrailer.pro
                   </a>
                 </div>
                 <div>
-                  <span className="font-bold uppercase text-sm">Mailing Address:</span>
+                  <span className="font-semibold text-sm">Mailing Address:</span>
                   <br />
-                  <address className="text-gray-700 not-italic">
-                    VoiceCraft, Inc.
+                  <address className="text-gray-600 not-italic">
+                    BookTrailer Pro
                     <br />
-                    123 Voice Street, Suite 100
+                    123 Creator Street, Suite 100
                     <br />
                     San Francisco, CA 94105
                     <br />
@@ -505,9 +503,9 @@ export default function TermsPage() {
                 </div>
               </div>
 
-              <div className="mt-6 pt-6 border-t-4 border-black">
+              <div className="mt-6 pt-6 border-t border-gray-200">
                 <p className="text-sm text-gray-600">
-                  By using VoiceCraft, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+                  By using BookTrailer Pro, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
                 </p>
               </div>
             </div>

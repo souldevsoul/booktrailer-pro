@@ -154,9 +154,9 @@ export default function Home() {
           </nav>
           <Button
             size="md"
-            onClick={() => window.location.href = '/dashboard'}
+            onClick={() => window.location.href = '/studio'}
           >
-            Get Started
+            Create Trailer
           </Button>
         </div>
       </header>
@@ -198,7 +198,7 @@ export default function Home() {
               <Button
                 size="xl"
                 className="gap-3"
-                onClick={() => window.location.href = '/dashboard'}
+                onClick={() => window.location.href = '/studio'}
               >
                 <RiArrowRightLine className="w-6 h-6" />
                 Create Your Trailer
@@ -403,7 +403,7 @@ export default function Home() {
               size="xl"
               variant="secondary"
               className="gap-3 bg-white text-gray-600 hover:bg-slate-50"
-              onClick={() => window.location.href = '/dashboard'}
+              onClick={() => window.location.href = '/studio'}
             >
               <RiArrowRightLine className="w-5 h-5" />
               Start Free Trial

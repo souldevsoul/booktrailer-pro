@@ -143,7 +143,7 @@ export default function CookiePolicyPage() {
                   If you have questions about our use of cookies, please contact us:
                 </p>
                 <div className="mt-4 p-6 border-4 border-black bg-white">
-                  <p><strong>Email:</strong> privacy@voicecraft.ai</p>
+                  <p><strong>Email:</strong> privacy@booktrailer.pro</p>
                   <p><strong>Address:</strong> VoiceCraft, Inc., 123 Voice Street, Suite 100, San Francisco, CA 94105, United States</p>
                 </div>
               </section>

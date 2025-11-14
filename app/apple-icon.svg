@@ -1,0 +1,29 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <rect width="180" height="180" fill="url(#gradient)"/>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Film reel -->
+  <rect x="30" y="50" width="120" height="80" rx="8" fill="#FFFFFF" opacity="0.2"/>
+
+  <!-- Film holes -->
+  <circle cx="50" cy="70" r="6" fill="#FFFFFF"/>
+  <circle cx="50" cy="110" r="6" fill="#FFFFFF"/>
+  <circle cx="130" cy="70" r="6" fill="#FFFFFF"/>
+  <circle cx="130" cy="110" r="6" fill="#FFFFFF"/>
+
+  <!-- Book -->
+  <rect x="60" y="60" width="60" height="60" rx="4" fill="#FFFFFF"/>
+  <line x1="70" y1="75" x2="110" y2="75" stroke="#6366F1" stroke-width="2"/>
+  <line x1="70" y1="85" x2="110" y2="85" stroke="#6366F1" stroke-width="2"/>
+  <line x1="70" y1="95" x2="110" y2="95" stroke="#6366F1" stroke-width="2"/>
+
+  <!-- Play button -->
+  <circle cx="90" cy="90" r="20" fill="#8B5CF6"/>
+  <path d="M85 80 L85 100 L105 90 Z" fill="#FFFFFF"/>
+</svg>
