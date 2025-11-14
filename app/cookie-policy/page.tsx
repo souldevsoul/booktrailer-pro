@@ -22,10 +22,10 @@ export default function CookiePolicyPage() {
         <Container maxWidth="2xl">
           <div className="prose prose-lg max-w-none">
             <div className="mb-8">
-              <div className="inline-flex items-center gap-3 px-6 py-3 bg-indigo-100 rounded-2xl shadow-cinema border border-slate-200 mb-6">
-                <span className="text-sm font-semibold tracking-wide text-indigo-600">Legal</span>
+              <div className="inline-flex items-center gap-3 px-6 py-3 bg-violet-100 rounded-2xl shadow-cinema border border-slate-200 mb-6">
+                <span className="text-sm font-semibold tracking-wide text-violet-600">Legal</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight bg-gradient-to-r from-violet-600 to-violet-600 bg-clip-text text-transparent">
                 Cookie Policy
               </h1>
               <p className="text-gray-600">Last updated: {new Date().toLocaleDateString()}</p>
@@ -57,8 +57,8 @@ export default function CookiePolicyPage() {
                 <h2 className="text-2xl font-semibold mb-4 text-slate-900">Types of Cookies We Use</h2>
 
                 <div className="space-y-6">
-                  <div className="p-6 rounded-2xl shadow-cinema border border-slate-200 bg-indigo-50">
-                    <h3 className="text-xl font-semibold mb-3 text-indigo-900">Essential Cookies</h3>
+                  <div className="p-6 rounded-2xl shadow-cinema border border-slate-200 bg-violet-50">
+                    <h3 className="text-xl font-semibold mb-3 text-violet-900">Essential Cookies</h3>
                     <p className="mb-2"><strong>Purpose:</strong> Required for core website functionality</p>
                     <p className="mb-2"><strong>Examples:</strong></p>
                     <ul className="list-disc pl-6">
@@ -105,7 +105,7 @@ export default function CookiePolicyPage() {
                 </ul>
 
                 <div className="mt-6 p-6 rounded-2xl shadow-cinema bg-gradient-dark text-white border border-slate-700">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-300">Browser Cookie Settings</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-300">Browser Cookie Settings</h3>
                   <ul className="space-y-2 text-sm">
                     <li>Chrome: Settings → Privacy and security → Cookies and other site data</li>
                     <li>Firefox: Settings → Privacy & Security → Cookies and Site Data</li>
@@ -124,9 +124,9 @@ export default function CookiePolicyPage() {
                   We do not control these third-party cookies and recommend reviewing their privacy policies:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" className="text-indigo-600 hover:underline">policies.google.com/privacy</a></li>
-                  <li>Facebook Data Policy: <a href="https://www.facebook.com/privacy" className="text-indigo-600 hover:underline">facebook.com/privacy</a></li>
-                  <li>Stripe Privacy Policy: <a href="https://stripe.com/privacy" className="text-indigo-600 hover:underline">stripe.com/privacy</a></li>
+                  <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" className="text-violet-600 hover:underline">policies.google.com/privacy</a></li>
+                  <li>Facebook Data Policy: <a href="https://www.facebook.com/privacy" className="text-violet-600 hover:underline">facebook.com/privacy</a></li>
+                  <li>Stripe Privacy Policy: <a href="https://stripe.com/privacy" className="text-violet-600 hover:underline">stripe.com/privacy</a></li>
                 </ul>
               </section>
 

@@ -150,7 +150,7 @@ export default function ContactPage() {
                   <div className="mb-6">
                     <a
                       href={`mailto:${method.email}`}
-                      className="text-lg font-semibold text-indigo-600 hover:text-indigo-700 underline decoration-indigo-300 hover:decoration-indigo-500 transition-colors"
+                      className="text-lg font-semibold text-violet-600 hover:text-violet-700 underline decoration-indigo-300 hover:decoration-indigo-500 transition-colors"
                     >
                       {method.email}
                     </a>
@@ -308,7 +308,7 @@ export default function ContactPage() {
                 <ul className="space-y-3">
                   {topic.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <RiCheckLine className="w-5 h-5 flex-shrink-0 mt-0.5 text-indigo-600" />
+                      <RiCheckLine className="w-5 h-5 flex-shrink-0 mt-0.5 text-violet-600" />
                       <span className="text-slate-600">{item}</span>
                     </li>
                   ))}
@@ -336,7 +336,7 @@ export default function ContactPage() {
               href="/pricing"
               className="p-6 bg-white/10 backdrop-cinematic rounded-2xl border border-white/20 text-center hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 group"
             >
-              <RiQuestionLine className="w-12 h-12 mx-auto mb-4 text-indigo-400 group-hover:text-indigo-300 transition-colors" />
+              <RiQuestionLine className="w-12 h-12 mx-auto mb-4 text-violet-400 group-hover:text-violet-300 transition-colors" />
               <h3 className="text-lg font-display font-bold mb-2 text-white">Pricing FAQ</h3>
               <p className="text-sm text-slate-300">
                 Common questions about plans and billing

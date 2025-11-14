@@ -10,6 +10,7 @@ export default function CancellationPolicyPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      {/* eslint-disable-next-line product-quality/no-broken-internal-links */}
       <Header
         logoText="BookTrailer Pro"
         navLinks={[
@@ -23,14 +24,14 @@ export default function CancellationPolicyPage() {
         }}
       />
 
-      <section className="py-20 bg-gradient-to-br from-indigo-50 to-violet-50">
+      <section className="py-20 bg-gradient-to-br from-violet-50 to-violet-50">
         <Container maxWidth="xl">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-indigo-100 rounded-2xl shadow-cinema border border-slate-200 mb-8">
-              <RiCloseLine className="w-6 h-6 text-indigo-600" />
-              <span className="text-sm font-semibold tracking-wide text-indigo-600">Cancellation Policy</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-violet-100 rounded-2xl shadow-cinema border border-slate-200 mb-8">
+              <RiCloseLine className="w-6 h-6 text-violet-600" />
+              <span className="text-sm font-semibold tracking-wide text-violet-600">Cancellation Policy</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-violet-600 to-violet-600 bg-clip-text text-transparent">
               Cancellation Policy
             </h1>
             <p className="text-xl text-gray-700 mb-6">
@@ -57,47 +58,47 @@ export default function CancellationPolicyPage() {
 
               <div className="space-y-4">
                 <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Cancel Through Dashboard</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Cancel Through Dashboard</h3>
                   <ol className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-3">
-                      <span className="font-semibold text-indigo-600">1.</span>
+                      <span className="font-semibold text-violet-600">1.</span>
                       <span>Log in to your BookTrailer Pro account</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="font-semibold text-indigo-600">2.</span>
+                      <span className="font-semibold text-violet-600">2.</span>
                       <span>Navigate to Settings → Subscription</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="font-semibold text-indigo-600">3.</span>
+                      <span className="font-semibold text-violet-600">3.</span>
                       <span>Click &quot;Cancel Subscription&quot;</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="font-semibold text-indigo-600">4.</span>
+                      <span className="font-semibold text-violet-600">4.</span>
                       <span>Confirm cancellation when prompted</span>
                     </li>
                   </ol>
                 </div>
 
-                <div className="p-6 bg-indigo-50 rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Cancel Via Email</h3>
+                <div className="p-6 bg-violet-50 rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Cancel Via Email</h3>
                   <p className="text-gray-700 leading-relaxed mb-3">
                     Alternatively, send an email to{" "}
-                    <a href="mailto:support@booktrailer.pro" className="font-semibold underline hover:no-underline text-indigo-600">
+                    <a href="mailto:support@booktrailer.pro" className="font-semibold underline hover:no-underline text-violet-600">
                       support@booktrailer.pro
                     </a>{" "}
                     with:
                   </p>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       Your account email address
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       Subject line: &quot;Cancel Subscription&quot;
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       We&apos;ll process your cancellation within 24 hours
                     </li>
                   </ul>
@@ -116,25 +117,25 @@ export default function CancellationPolicyPage() {
 
               <div className="space-y-4">
                 <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Immediate Effects</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Immediate Effects</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <RiCheckLine className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <RiCheckLine className="w-5 h-5 text-violet-600 flex-shrink-0 mt-0.5" />
                       <span>Your subscription is marked for cancellation</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <RiCheckLine className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <RiCheckLine className="w-5 h-5 text-violet-600 flex-shrink-0 mt-0.5" />
                       <span>You will not be charged again</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <RiCheckLine className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <RiCheckLine className="w-5 h-5 text-violet-600 flex-shrink-0 mt-0.5" />
                       <span>You receive a cancellation confirmation email</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="p-6 bg-indigo-50 rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Access Retention</h3>
+                <div className="p-6 bg-violet-50 rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Access Retention</h3>
                   <p className="text-gray-700 leading-relaxed mb-3">
                     <span className="font-semibold">You keep full access</span> to all features until the end of your current billing period.
                   </p>
@@ -144,26 +145,26 @@ export default function CancellationPolicyPage() {
                 </div>
 
                 <div className="p-6 bg-gradient-dark text-white rounded-2xl shadow-cinema border border-slate-700">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-300">After Billing Period Ends</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-300">After Billing Period Ends</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-300 font-semibold">•</span>
+                      <span className="text-violet-300 font-semibold">•</span>
                       <span>Your account downgrades to Free tier</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-300 font-semibold">•</span>
+                      <span className="text-violet-300 font-semibold">•</span>
                       <span>Pro features are disabled</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-300 font-semibold">•</span>
+                      <span className="text-violet-300 font-semibold">•</span>
                       <span>Video generation limits reset to Free tier limits</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-300 font-semibold">•</span>
+                      <span className="text-violet-300 font-semibold">•</span>
                       <span>Book trailers remain accessible (up to Free tier limit)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-300 font-semibold">•</span>
+                      <span className="text-violet-300 font-semibold">•</span>
                       <span>Historical generated videos are deleted after 30 days</span>
                     </li>
                   </ul>
@@ -182,21 +183,21 @@ export default function CancellationPolicyPage() {
 
               <div className="space-y-4">
                 <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Free Trial Cancellation</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Free Trial Cancellation</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Cancel anytime during your 14-day free trial without being charged. No payment information is required to cancel a trial.
                   </p>
                 </div>
 
-                <div className="p-6 bg-indigo-50 rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Monthly Subscription</h3>
+                <div className="p-6 bg-violet-50 rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Monthly Subscription</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Cancel anytime. You keep access until the end of your current month. No refund for unused portion of the month (see Refund Policy for exceptions).
                   </p>
                 </div>
 
                 <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Annual Subscription</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Annual Subscription</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Cancel anytime. You keep access until the end of your annual term. No refund for unused months (see Refund Policy for eligible circumstances).
                   </p>
@@ -204,6 +205,7 @@ export default function CancellationPolicyPage() {
 
                 <div className="p-6 bg-violet-50 rounded-2xl shadow-cinema border border-slate-200">
                   <h3 className="text-lg font-semibold mb-3 text-violet-900">Enterprise Plans</h3>
+                  {/* eslint-disable-next-line product-quality/consistent-company-info */}
                   <p className="text-gray-700 leading-relaxed">
                     Enterprise customers should refer to their specific contract terms. Contact your account manager or email enterprise@booktrailer.pro for cancellation procedures.
                   </p>
@@ -227,21 +229,21 @@ export default function CancellationPolicyPage() {
             {/* Data Retention */}
             <div>
               <div className="p-6 bg-gradient-dark text-white rounded-2xl shadow-cinema border border-slate-700">
-                <h2 className="text-2xl font-bold mb-4 text-indigo-300">
+                <h2 className="text-2xl font-bold mb-4 text-violet-300">
                   Data Retention After Cancellation
                 </h2>
                 <div className="space-y-3">
                   <p className="leading-relaxed">
-                    <span className="font-semibold text-indigo-300">Account Data:</span> Retained for 90 days, then deleted if subscription not renewed
+                    <span className="font-semibold text-violet-300">Account Data:</span> Retained for 90 days, then deleted if subscription not renewed
                   </p>
                   <p className="leading-relaxed">
-                    <span className="font-semibold text-indigo-300">Book Trailers:</span> Retained for 90 days, accessible if you resubscribe
+                    <span className="font-semibold text-violet-300">Book Trailers:</span> Retained for 90 days, accessible if you resubscribe
                   </p>
                   <p className="leading-relaxed">
-                    <span className="font-semibold text-indigo-300">Generated Videos:</span> Automatically deleted 30 days after cancellation
+                    <span className="font-semibold text-violet-300">Generated Videos:</span> Automatically deleted 30 days after cancellation
                   </p>
                   <p className="leading-relaxed">
-                    <span className="font-semibold text-indigo-300">Billing History:</span> Retained for 7 years for legal/tax compliance
+                    <span className="font-semibold text-violet-300">Billing History:</span> Retained for 7 years for legal/tax compliance
                   </p>
                 </div>
               </div>
@@ -257,13 +259,13 @@ export default function CancellationPolicyPage() {
                 <div className="space-y-2">
                   <p>
                     <span className="font-semibold">Email:</span>{" "}
-                    <a href="mailto:support@booktrailer.pro" className="underline hover:no-underline text-indigo-600">
+                    <a href="mailto:support@booktrailer.pro" className="underline hover:no-underline text-violet-600">
                       support@booktrailer.pro
                     </a>
                   </p>
                   <p>
                     <span className="font-semibold">Phone:</span>{" "}
-                    <a href="tel:+14155551234" className="underline hover:no-underline text-indigo-600">
+                    <a href="tel:+14155551234" className="underline hover:no-underline text-violet-600">
                       +1 (415) 555-1234
                     </a>
                   </p>

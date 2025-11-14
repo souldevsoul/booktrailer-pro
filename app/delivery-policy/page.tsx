@@ -23,14 +23,14 @@ export default function DeliveryPolicyPage() {
         }}
       />
 
-      <section className="py-20 bg-gradient-to-br from-indigo-50 to-violet-50">
+      <section className="py-20 bg-gradient-to-br from-violet-50 to-violet-50">
         <Container maxWidth="xl">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-indigo-100 rounded-2xl shadow-cinema border border-slate-200 mb-8">
-              <RiTruckLine className="w-6 h-6 text-indigo-600" />
-              <span className="text-sm font-semibold tracking-wide text-indigo-600">Delivery Policy</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-violet-100 rounded-2xl shadow-cinema border border-slate-200 mb-8">
+              <RiTruckLine className="w-6 h-6 text-violet-600" />
+              <span className="text-sm font-semibold tracking-wide text-violet-600">Delivery Policy</span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-violet-600 to-violet-600 bg-clip-text text-transparent">
               Delivery Policy
             </h1>
             <p className="text-xl text-gray-700 mb-6">
@@ -57,7 +57,7 @@ export default function DeliveryPolicyPage() {
 
               <div className="space-y-4">
                 <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Digital Service Delivery</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Digital Service Delivery</h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     BookTrailer Pro is a 100% digital service platform. We do not ship physical goods. All services are delivered electronically via our web application and API.
                   </p>
@@ -66,27 +66,27 @@ export default function DeliveryPolicyPage() {
                   </p>
                 </div>
 
-                <div className="p-6 bg-indigo-50 rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">What Gets Delivered</h3>
+                <div className="p-6 bg-violet-50 rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">What Gets Delivered</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span>Instant access to BookTrailer Pro web application</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span>AI-powered book trailer video generation services</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span>Cinematic video creation capabilities</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span>Generated video files (downloadable MP4/MOV)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span>API access for programmatic usage (Pro and Enterprise plans)</span>
                     </li>
                   </ul>
@@ -105,7 +105,7 @@ export default function DeliveryPolicyPage() {
 
               <div className="space-y-4">
                 <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Account Access</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Account Access</h3>
                   <p className="text-gray-700 leading-relaxed mb-3">
                     <span className="font-semibold">Delivery Time:</span> Instant
                   </p>
@@ -114,26 +114,26 @@ export default function DeliveryPolicyPage() {
                   </p>
                 </div>
 
-                <div className="p-6 bg-indigo-50 rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Video Generation</h3>
+                <div className="p-6 bg-violet-50 rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Video Generation</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span><span className="font-semibold">Standard trailer generation:</span> 2-5 minutes depending on video length and complexity</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span><span className="font-semibold">Custom scene generation:</span> 3-7 minutes for initial rendering</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span><span className="font-semibold">Batch processing:</span> Varies based on queue length and content volume</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Confirmation & Receipts</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Confirmation & Receipts</h3>
                   <p className="text-gray-700 leading-relaxed">
                     <span className="font-semibold">Email confirmation:</span> Sent immediately upon successful payment and service activation. Receipts include transaction details, plan information, and next billing date.
                   </p>
@@ -152,7 +152,7 @@ export default function DeliveryPolicyPage() {
 
               <div className="space-y-4">
                 <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Global Service</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Global Service</h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     BookTrailer Pro services are available worldwide. You can access our platform from anywhere with an internet connection.
                   </p>
@@ -161,27 +161,27 @@ export default function DeliveryPolicyPage() {
                   </p>
                 </div>
 
-                <div className="p-6 bg-indigo-50 rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Regional Restrictions</h3>
+                <div className="p-6 bg-violet-50 rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Regional Restrictions</h3>
                   <p className="text-gray-700 leading-relaxed mb-3">
                     Our services may not be available in regions where:
                   </p>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span>International sanctions prohibit service delivery</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span>Local laws restrict AI-generated content</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span>Payment processing is unavailable</span>
                     </li>
                   </ul>
                   <p className="text-gray-700 leading-relaxed mt-3">
-                    Contact <a href="mailto:support@booktrailer.pro" className="font-semibold underline hover:no-underline text-indigo-600">support@booktrailer.pro</a> to verify service availability in your region.
+                    Contact <a href="mailto:support@booktrailer.pro" className="font-semibold underline hover:no-underline text-violet-600">support@booktrailer.pro</a> to verify service availability in your region.
                   </p>
                 </div>
               </div>
@@ -198,7 +198,7 @@ export default function DeliveryPolicyPage() {
 
               <div className="space-y-4">
                 <div className="p-6 bg-white rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Uptime Commitment</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Uptime Commitment</h3>
                   <p className="text-gray-700 leading-relaxed mb-3">
                     <span className="font-semibold">Target Uptime:</span> 99.9% monthly uptime
                   </p>
@@ -207,44 +207,44 @@ export default function DeliveryPolicyPage() {
                   </p>
                 </div>
 
-                <div className="p-6 bg-indigo-50 rounded-2xl shadow-cinema border border-slate-200">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-900">Planned Maintenance</h3>
+                <div className="p-6 bg-violet-50 rounded-2xl shadow-cinema border border-slate-200">
+                  <h3 className="text-lg font-semibold mb-3 text-violet-900">Planned Maintenance</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span>Scheduled during low-traffic periods (typically 2-4 AM PST)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span>48-hour advance notice via email</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 font-semibold">•</span>
+                      <span className="text-violet-600 font-semibold">•</span>
                       <span>Real-time status updates at status.booktrailer.pro</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="p-6 bg-gradient-dark text-white rounded-2xl shadow-cinema border border-slate-700">
-                  <h3 className="text-lg font-semibold mb-3 text-indigo-300">Unplanned Outages</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-violet-300">Unplanned Outages</h3>
                   <p className="leading-relaxed mb-3">
                     In rare cases of unplanned service interruption:
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-300 font-semibold">•</span>
+                      <span className="text-violet-300 font-semibold">•</span>
                       <span>Immediate notification via status page and email</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-300 font-semibold">•</span>
+                      <span className="text-violet-300 font-semibold">•</span>
                       <span>Transparent ETAs for service restoration</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-300 font-semibold">•</span>
+                      <span className="text-violet-300 font-semibold">•</span>
                       <span>Post-incident reports for major outages</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-300 font-semibold">•</span>
+                      <span className="text-violet-300 font-semibold">•</span>
                       <span>Potential service credits for extended downtime (see Refund Policy)</span>
                     </li>
                   </ul>
@@ -286,7 +286,7 @@ export default function DeliveryPolicyPage() {
             {/* Failed Delivery */}
             <div>
               <div className="p-6 bg-gradient-dark text-white rounded-2xl shadow-cinema border border-slate-700">
-                <h2 className="text-2xl font-bold mb-4 text-indigo-300">
+                <h2 className="text-2xl font-bold mb-4 text-violet-300">
                   If Service Delivery Fails
                 </h2>
                 <p className="leading-relaxed mb-4">
@@ -294,23 +294,23 @@ export default function DeliveryPolicyPage() {
                 </p>
                 <ol className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <span className="font-semibold text-indigo-300">1.</span>
+                    <span className="font-semibold text-violet-300">1.</span>
                     <span>Check your email for payment confirmation and account activation</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="font-semibold text-indigo-300">2.</span>
+                    <span className="font-semibold text-violet-300">2.</span>
                     <span>Verify your internet connection and browser compatibility</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="font-semibold text-indigo-300">3.</span>
+                    <span className="font-semibold text-violet-300">3.</span>
                     <span>Clear browser cache and cookies, then try logging in again</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="font-semibold text-indigo-300">4.</span>
+                    <span className="font-semibold text-violet-300">4.</span>
                     <span>Check status.booktrailer.pro for any ongoing service issues</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="font-semibold text-indigo-300">5.</span>
+                    <span className="font-semibold text-violet-300">5.</span>
                     <span>Contact support@booktrailer.pro immediately - we&apos;ll resolve within 24 hours</span>
                   </li>
                 </ol>
@@ -327,19 +327,19 @@ export default function DeliveryPolicyPage() {
                 <div className="space-y-2">
                   <p>
                     <span className="font-semibold">Email:</span>{" "}
-                    <a href="mailto:support@booktrailer.pro" className="underline hover:no-underline text-indigo-600">
+                    <a href="mailto:support@booktrailer.pro" className="underline hover:no-underline text-violet-600">
                       support@booktrailer.pro
                     </a>
                   </p>
                   <p>
                     <span className="font-semibold">Phone:</span>{" "}
-                    <a href="tel:+14155551234" className="underline hover:no-underline text-indigo-600">
+                    <a href="tel:+14155551234" className="underline hover:no-underline text-violet-600">
                       +1 (415) 555-1234
                     </a>
                   </p>
                   <p>
                     <span className="font-semibold">Status Page:</span>{" "}
-                    <a href="https://status.booktrailer.pro" className="underline hover:no-underline text-indigo-600" target="_blank" rel="noopener noreferrer">
+                    <a href="https://status.booktrailer.pro" className="underline hover:no-underline text-violet-600" target="_blank" rel="noopener noreferrer">
                       status.booktrailer.pro
                     </a>
                   </p>
