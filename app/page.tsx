@@ -162,9 +162,20 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-gray-50/30 to-gray-50/30 min-h-[90vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1920&q=80"
+            alt="Cinema background"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+        </div>
+
         {/* Spotlight effect */}
-        <div className="absolute inset-0 spotlight-overlay pointer-events-none" />
+        <div className="absolute inset-0 spotlight-overlay pointer-events-none z-[5]" />
 
         <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
           <div className="text-center space-y-12">
@@ -178,17 +189,17 @@ export default function Home() {
             <div className="space-y-6">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-none">
                 <span className={`block transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <span className="text-slate-900">Turn Your Book Into</span>
+                  <span className="text-white">Turn Your Book Into</span>
                 </span>
                 <span className={`block transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <span className="text-gradient-cinema">A Cinematic Trailer</span>
+                  <span className="bg-gradient-to-r from-violet-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">A Cinematic Trailer</span>
                 </span>
               </h1>
             </div>
 
             {/* Subtitle */}
             <div className={`transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <Text variant="lead" className="text-slate-700 max-w-3xl mx-auto text-xl md:text-2xl font-medium leading-relaxed">
+              <Text variant="lead" className="text-gray-100 max-w-3xl mx-auto text-xl md:text-2xl font-medium leading-relaxed">
                 Create stunning, professional book trailers in minutes. AI-powered video generation that captures your story&apos;s essence and drives reader engagement.
               </Text>
             </div>
