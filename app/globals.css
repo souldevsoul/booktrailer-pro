@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: text;
 }
 
-/* Minimal Animations */
+/* Cinematic Animations */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -138,8 +138,102 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(20px);
+  }
+  50% {
+    transform: scale(1.05) translateY(-5px);
+  }
+  70% {
+    transform: scale(0.95) translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(99, 102, 241, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.8), 0 0 60px rgba(99, 102, 241, 0.4);
+  }
+}
+
+/* Premiere Spotlight Effect */
+@keyframes spotlight-sweep {
+  0% {
+    opacity: 0.3;
+    transform: translateX(-100%) rotate(-5deg);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(100%) rotate(5deg);
+  }
+}
+
+/* Film reel rotation */
+@keyframes film-reel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Premiere curtain reveal */
+@keyframes curtain-reveal {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* Hollywood star glitter */
+@keyframes star-glitter {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* Camera flash effect */
+@keyframes camera-flash {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
 
 .animate-fade-in {
@@ -154,10 +248,39 @@ h1, h2, h3, h4, h5, h6 {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Minimal Effects */
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-spotlight {
+  animation: spotlight-sweep 8s ease-in-out infinite;
+}
+
+.animate-film-reel {
+  animation: film-reel 8s linear infinite;
+}
+
+.animate-star-glitter {
+  animation: star-glitter 2s ease-in-out infinite;
+}
+
+/* Backdrop Effects */
 .backdrop-blur-minimal {
   backdrop-filter: blur(8px) saturate(120%);
   -webkit-backdrop-filter: blur(8px) saturate(120%);
+}
+
+.backdrop-cinematic {
+  backdrop-filter: blur(12px) saturate(150%) brightness(110%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%) brightness(110%);
 }
 
 /* Hover effects */
@@ -203,6 +326,44 @@ h1, h2, h3, h4, h5, h6 {
 
 .film-strip::before { top: 0; }
 .film-strip::after { bottom: 0; }
+
+/* Cinematic Shadows & Glows */
+.shadow-cinema-sm {
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-cinema-md {
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.15), 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-cinema-lg {
+  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-cinema-xl {
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.25), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.shadow-cinema-2xl {
+  box-shadow: 0 30px 80px rgba(99, 102, 241, 0.3), 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-glow-indigo {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4), 0 0 40px rgba(99, 102, 241, 0.2);
+}
+
+.shadow-glow-violet {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2);
+}
+
+.shadow-glow-pink {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.4), 0 0 40px rgba(236, 72, 153, 0.2);
+}
+
+/* Gradient Cinema */
+.gradient-cinema {
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+}
 
 /* Three.js Canvas Container */
 #three-canvas {

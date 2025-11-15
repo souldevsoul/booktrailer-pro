@@ -161,71 +161,206 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1920&q=80"
-            alt="Cinema background"
-            className="w-full h-full object-cover"
-          />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+      {/* Hero Section - Hollywood Premiere Style */}
+      <section className="relative overflow-hidden min-h-screen bg-black">
+        {/* Red Carpet Background with Spotlights */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-violet-950 via-purple-900 to-black opacity-90" />
+          {/* Animated Spotlights */}
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-pink-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
         </div>
 
-        {/* Spotlight effect */}
-        <div className="absolute inset-0 spotlight-overlay pointer-events-none z-[5]" />
+        <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[85vh]">
+            {/* Left Side - Cinematic Text Content */}
+            <div className="space-y-8 lg:space-y-10">
+              {/* Director's Clapperboard Badge */}
+              <div className={`inline-flex items-center gap-3 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+                <div className="relative">
+                  {/* Clapperboard */}
+                  <div className="w-16 h-16 bg-gradient-to-br from-white to-gray-200 rounded-lg shadow-2xl transform -rotate-6 border-2 border-black">
+                    <div className="absolute top-0 inset-x-0 h-4 bg-gradient-to-r from-white via-gray-800 to-black" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <RiClapperboardLine className="w-8 h-8 text-black" />
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-1">
+                  <div className="text-xs font-mono text-violet-400 uppercase tracking-widest">Now Playing</div>
+                  <div className="text-sm font-bold text-white uppercase tracking-wider">BookTrailer Pro</div>
+                </div>
+              </div>
 
-        <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
-          <div className="text-center space-y-12">
-            {/* Badge */}
-            <div className={`inline-flex items-center gap-3 px-6 py-3 bg-gradient-primary text-white rounded-full shadow-cinema-lg transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-              <RiSparklingLine className="w-5 h-5" />
-              <Text variant="body-sm" className="font-semibold uppercase tracking-wider">AI-Powered Book Trailers</Text>
+              {/* Movie Poster Style Headline */}
+              <div className="space-y-6">
+                {/* "From the creators of" style text */}
+                <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '200ms' }}>
+                  <div className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm border border-violet-500/30 rounded-full">
+                    <span className="text-violet-300 text-sm font-semibold uppercase tracking-[0.3em]">Premiere Presentation</span>
+                  </div>
+                </div>
+
+                {/* Main Headline - Movie Poster Style */}
+                <h1 className="space-y-4">
+                  {/* Top line - smaller, classic movie style */}
+                  <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '400ms' }}>
+                    <span className="block text-2xl md:text-3xl font-display font-bold text-violet-300 tracking-wider uppercase">
+                      Transform Your Story
+                    </span>
+                  </div>
+
+                  {/* Main title - HUGE and dramatic */}
+                  <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} style={{ transitionDelay: '600ms' }}>
+                    <span className="block text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-black leading-none tracking-tight">
+                      <span className="block text-white drop-shadow-2xl">FROM BOOK</span>
+                      <span className="block bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-shimmer" style={{ backgroundSize: '200% auto' }}>
+                        TO BLOCKBUSTER
+                      </span>
+                    </span>
+                  </div>
+                </h1>
+
+                {/* Tagline - Movie style */}
+                <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '800ms' }}>
+                  <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-xl">
+                    Create cinematic book trailers in minutes. AI-powered video generation that turns your pages into premiere-worthy content.
+                  </p>
+                </div>
+              </div>
+
+              {/* Rating & Stats - Movie Style */}
+              <div className={`flex flex-wrap items-center gap-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '1000ms' }}>
+                <div className="flex items-center gap-2">
+                  {[...Array(5)].map((_, i) => (
+                    <RiStarFill key={i} className="w-5 h-5 text-yellow-400" />
+                  ))}
+                </div>
+                <div className="h-6 w-px bg-gray-600" />
+                <div className="text-gray-400 font-medium">1000+ Authors</div>
+                <div className="h-6 w-px bg-gray-600" />
+                <div className="text-gray-400 font-medium">50k+ Trailers</div>
+              </div>
+
+              {/* CTA Buttons - Premiere Style */}
+              <div className="flex flex-wrap gap-4 pt-4">
+                <div className={`${isVisible ? 'animate-bounce-in' : 'opacity-0'}`} style={{ animationDelay: '1200ms', animationFillMode: 'both' }}>
+                  <Button
+                    size="xl"
+                    className="gap-3 text-lg px-10 py-7 animate-pulse-glow relative overflow-hidden group"
+                    onClick={() => window.location.href = '/studio'}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <RiFilmLine className="w-6 h-6 relative z-10" />
+                    <span className="relative z-10 font-bold">Start Creating</span>
+                  </Button>
+                </div>
+                <div className={`${isVisible ? 'animate-bounce-in' : 'opacity-0'}`} style={{ animationDelay: '1400ms', animationFillMode: 'both' }}>
+                  <Button
+                    size="xl"
+                    variant="outline"
+                    className="gap-3 text-lg px-10 py-7 border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50"
+                    onClick={() => window.location.href = '/demo'}
+                  >
+                    <RiPlayCircleLine className="w-6 h-6" />
+                    <span className="font-bold">Watch Trailers</span>
+                  </Button>
+                </div>
+              </div>
+
+              {/* "In theaters now" style text */}
+              <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '1600ms' }}>
+                <div className="flex items-center gap-3 text-sm text-gray-500">
+                  <RiSparklingLine className="w-4 h-4 text-violet-400" />
+                  <span className="uppercase tracking-wider">No credit card required • Start free</span>
+                </div>
+              </div>
             </div>
 
-            {/* Big Revealing Text */}
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-none">
-                <span className={`block transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <span className="text-white">Turn Your Book Into</span>
-                </span>
-                <span className={`block transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <span className="bg-gradient-to-r from-violet-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">A Cinematic Trailer</span>
-                </span>
-              </h1>
-            </div>
+            {/* Right Side - Film Strip Showcase */}
+            <div className={`relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 rotate-0' : 'opacity-0 translate-x-12 rotate-3'}`} style={{ transitionDelay: '800ms' }}>
+              {/* Film Strip Container */}
+              <div className="relative">
+                {/* Main Film Strip Frame */}
+                <div className="relative bg-black rounded-2xl shadow-2xl overflow-hidden border-8 border-black">
+                  {/* Film perforations - Top */}
+                  <div className="absolute top-0 left-0 right-0 h-6 bg-black z-20 flex items-center justify-around px-4">
+                    {[...Array(12)].map((_, i) => (
+                      <div key={i} className="w-4 h-3 bg-gray-800 rounded-sm" />
+                    ))}
+                  </div>
 
-            {/* Subtitle */}
-            <div className={`transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <Text variant="lead" className="text-gray-100 max-w-3xl mx-auto text-xl md:text-2xl font-medium leading-relaxed">
-                Create stunning, professional book trailers in minutes. AI-powered video generation that captures your story&apos;s essence and drives reader engagement.
-              </Text>
-            </div>
+                  {/* Film perforations - Bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 h-6 bg-black z-20 flex items-center justify-around px-4">
+                    {[...Array(12)].map((_, i) => (
+                      <div key={i} className="w-4 h-3 bg-gray-800 rounded-sm" />
+                    ))}
+                  </div>
 
-            {/* CTA Buttons */}
-            <div className={`flex flex-wrap justify-center gap-6 pt-4 transition-all duration-700 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <Button
-                size="xl"
-                className="gap-3"
-                onClick={() => window.location.href = '/studio'}
-              >
-                <RiArrowRightLine className="w-6 h-6" />
-                Create Your Trailer
-              </Button>
-              <Button
-                size="xl"
-                variant="outline"
-                className="gap-3"
-                onClick={() => window.location.href = '/demo'}
-              >
-                <RiPlayCircleLine className="w-6 h-6" />
-                Watch Demo
-              </Button>
+                  {/* Split Screen Content */}
+                  <div className="relative aspect-[9/16] md:aspect-[3/4] overflow-hidden">
+                    {/* Book → Trailer Transformation */}
+                    <div className="absolute inset-0 grid grid-cols-2 gap-1">
+                      {/* Left: Book Cover */}
+                      <div className="relative bg-gradient-to-br from-amber-900 via-amber-800 to-amber-950 flex items-center justify-center p-6">
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30" />
+                        <div className="relative z-10 text-center space-y-4">
+                          <RiBookLine className="w-20 h-20 text-amber-200 mx-auto drop-shadow-lg" />
+                          <div className="text-amber-100 font-display font-bold text-xl uppercase tracking-wider">Your Book</div>
+                        </div>
+                        {/* Vertical divider */}
+                        <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-white to-transparent opacity-50" />
+                      </div>
+
+                      {/* Right: Movie Camera/Film */}
+                      <div className="relative bg-gradient-to-br from-violet-900 via-purple-800 to-pink-900 flex items-center justify-center p-6 overflow-hidden">
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30" />
+                        {/* Animated film reels */}
+                        <div className="absolute top-8 right-8 w-16 h-16 border-8 border-pink-400/30 rounded-full animate-spin" style={{ animationDuration: '8s' }}>
+                          <div className="absolute inset-2 border-4 border-violet-400/30 rounded-full" />
+                        </div>
+                        <div className="absolute bottom-8 left-8 w-12 h-12 border-6 border-purple-400/30 rounded-full animate-spin" style={{ animationDuration: '6s', animationDirection: 'reverse' }}>
+                          <div className="absolute inset-2 border-4 border-pink-400/30 rounded-full" />
+                        </div>
+                        <div className="relative z-10 text-center space-y-4">
+                          <RiFilmLine className="w-20 h-20 text-violet-200 mx-auto drop-shadow-lg animate-pulse" style={{ animationDuration: '3s' }} />
+                          <div className="text-violet-100 font-display font-bold text-xl uppercase tracking-wider">Cinematic Trailer</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Transformation Arrow Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+                      <div className="bg-black/80 backdrop-blur-sm rounded-full p-6 border-4 border-white/20 shadow-2xl animate-pulse">
+                        <RiArrowRightLine className="w-12 h-12 text-white" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Film timecode overlay */}
+                  <div className="absolute top-8 left-0 right-0 z-20 px-8 flex justify-between items-center text-xs font-mono text-white/60">
+                    <span>00:00:00:00</span>
+                    <span className="animate-pulse">⏺ REC</span>
+                  </div>
+                </div>
+
+                {/* Floating camera icon */}
+                <div className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl shadow-2xl flex items-center justify-center transform rotate-12 animate-float">
+                  <RiVideoLine className="w-12 h-12 text-white" />
+                </div>
+
+                {/* Film roll decoration */}
+                <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-amber-500 rounded-full shadow-xl flex items-center justify-center animate-float" style={{ animationDelay: '1s', animationDuration: '4s' }}>
+                  <RiMagicLine className="w-10 h-10 text-white" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Bottom premiere curtain effect */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/80 to-transparent" />
       </section>
 
       {/* Trailer Examples Carousel */}
